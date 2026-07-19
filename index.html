@@ -216,7 +216,7 @@
   .hero .wrap{
     display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px;
     align-items:center;
-    padding-top:96px; padding-bottom:96px;
+    padding-top:32px; padding-bottom:96px;
     position:relative; z-index:2;
   }
   .hero .eyebrow{color:var(--brass-light);}
@@ -236,9 +236,8 @@
     position:relative; display:flex; align-items:center; justify-content:center;
     width:100%; max-width:380px; aspect-ratio:1/1; margin:0 auto;
   }
-  .seal-rings{position:absolute; inset:0; width:100%; height:100%;}
   .seal-logo{
-    position:relative; width:52%; height:auto; z-index:2;
+    position:relative; width:94%; height:auto; z-index:2;
     filter:drop-shadow(0 6px 18px rgba(0,0,0,0.45));
   }
   .hero-strip{
@@ -431,7 +430,7 @@
     nav ul a:hover{ border-color:var(--hair); background:var(--paper-2); }
     .utility-bar .wrap{ justify-content:center; row-gap:10px; padding:10px 16px; }
     .utility-group{ flex-wrap:wrap; justify-content:center; }
-    .hero .wrap{grid-template-columns:1fr; padding-top:52px; padding-bottom:44px;}
+    .hero .wrap{grid-template-columns:1fr; padding-top:28px; padding-bottom:44px;}
     .hero h1{ font-size:clamp(28px, 7vw, 38px); }
     .hero p.sub{ font-size:15.5px; max-width:none; }
     .seal-holder{order:-1; max-width:190px; margin:0 auto 24px;}
@@ -563,26 +562,6 @@
       <p class="sub" data-i18n="hero.sub">Advocate, enrolled with the Bar Council of Punjab &amp; Haryana. Practising before the Hon'ble Supreme Court of India, the Hon'ble Punjab &amp; Haryana High Court, Chandigarh, and other Hon'ble Courts and Tribunals. Background in Computer Science &amp; Engineering and Enterprise Software before transitioning to the Practice of Law.</p>
     </div>
     <div class="seal-holder">
-      <svg class="seal-rings" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="200" cy="200" r="188" fill="none" stroke="#5b6472" stroke-width="1" opacity="0.55"/>
-        <circle cx="200" cy="200" r="150" fill="none" stroke="#5b6472" stroke-width="0.6" opacity="0.35"/>
-        <g stroke="#5b6472" stroke-width="1" fill="none" opacity="0.55">
-          <path d="M200 12 V50 M200 12 h18 M200 50 h-14 v10"/>
-          <path d="M200 388 V350 M200 388 h-18 M200 350 h14 v-10"/>
-          <path d="M12 200 H50 M12 200 v18 M50 200 v-14 h10"/>
-          <path d="M388 200 H350 M388 200 v-18 M350 200 v14 h-10"/>
-          <path d="M67 67 L92 92 M67 67 v18 M92 92 h-14"/>
-          <path d="M333 67 L308 92 M333 67 v18 M308 92 h14"/>
-          <path d="M67 333 L92 308 M67 333 v-18 M92 308 h-14"/>
-          <path d="M333 333 L308 308 M333 333 v-18 M308 308 h14"/>
-        </g>
-        <g fill="#5b6472" opacity="0.7">
-          <circle cx="50" cy="50" r="3"/><circle cx="350" cy="50" r="3"/>
-          <circle cx="50" cy="350" r="3"/><circle cx="350" cy="350" r="3"/>
-          <circle cx="200" cy="50" r="2.4"/><circle cx="200" cy="350" r="2.4"/>
-          <circle cx="50" cy="200" r="2.4"/><circle cx="350" cy="200" r="2.4"/>
-        </g>
-      </svg>
       <img class="seal-logo" src="logo_clean.png" alt="Law Offices of Arun Kumar seal">
     </div>
   </div>
