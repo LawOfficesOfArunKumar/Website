@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law Offices of Arun Kumar — Advocate</title>
+<meta name="description" content="Law Offices of Arun Kumar. Independent legal practice. Enrolled Advocate, Bar Council of Punjab and Haryana. Informational website only.">
+<link rel="icon" href="logo_clean.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root, [data-theme="light"]{
+    --ink:#12161b;
+    --ink-2:#1b2129;
+    --paper:#f7f8f9;
+    --paper-2:#ececee;
+    --charcoal:#1d2127;
+    --brass:#54606d;
+    --brass-light:#96a1ad;
+    --oxblood:#7a2020;
+    --stone:#ccd1d6;
+    --hair: rgba(84,96,109,0.28);
+    --muted:#4c525a;
+    --muted-2:#666d76;
+    --card-bg:#ffffff;
+    --maxw: 1180px;
+    --focus: #1d5fd6;
+  }
+  [data-theme="dark"]{
+    --paper:#15181c;
+    --paper-2:#1c2025;
+    --charcoal:#e6e8ea;
+    --muted:#b7bcc2;
+    --muted-2:#9aa0a7;
+    --hair: rgba(255,255,255,0.14);
+    --stone:#3a3f45;
+    --card-bg:#1a1e23;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;} }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--charcoal);
+    font-family:'Source Serif 4','Noto Serif Devanagari','Noto Sans Gurmukhi', Georgia, serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    transition:background .2s ease, color .2s ease;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces','Noto Serif Devanagari','Noto Sans Gurmukhi', serif;
+    font-weight:500;
+    letter-spacing:0.005em;
+    margin:0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono','Noto Sans Devanagari','Noto Sans Gurmukhi', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+  }
+  a{color:inherit;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+
+  /* ===== Accessibility ===== */
+  .skip-link{
+    position:absolute; left:-9999px; top:auto;
+    background:var(--ink); color:var(--paper);
+    padding:14px 20px; z-index:1000;
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+    text-decoration:none; border:1px solid var(--brass-light);
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:3px solid var(--focus); outline-offset:2px;
+  }
+  [data-textsize="lg"] body,
+  [data-textsize="lg"] .about-grid p,
+  [data-textsize="lg"] .practice-card p,
+  [data-textsize="lg"] .cred-item p,
+  [data-textsize="lg"] .contact-line,
+  [data-textsize="lg"] .section-head p,
+  [data-textsize="lg"] .writing-item p,
+  [data-textsize="lg"] footer p{
+    font-size:1.16em; line-height:1.75;
+  }
+  [data-textsize="lg"] .hero p.sub{ font-size:1.15em; }
+
+  /* ===== Utility bar ===== */
+  .utility-bar{
+    background:var(--ink); color:var(--stone);
+    font-family:'IBM Plex Mono','Noto Sans Devanagari','Noto Sans Gurmukhi', monospace;
+    font-size:11.5px; letter-spacing:0.04em;
+  }
+  .utility-bar .wrap{
+    display:flex; align-items:center; justify-content:flex-end; gap:22px;
+    padding:9px 32px; flex-wrap:wrap;
+  }
+  .utility-group{display:flex; align-items:center; gap:8px;}
+  .utility-group span.lbl{color:var(--brass-light); text-transform:uppercase; margin-right:2px;}
+  .utility-btn{
+    background:transparent; border:1px solid rgba(166,174,185,0.4);
+    color:var(--stone); font-family:inherit; font-size:11px; letter-spacing:0.05em;
+    padding:5px 10px; cursor:pointer; border-radius:2px;
+  }
+  .utility-btn[aria-pressed="true"]{ background:var(--brass); color:var(--ink); border-color:var(--brass); }
+  .utility-icons{display:flex; align-items:center; gap:12px;}
+  .utility-icons a{ display:flex; color:var(--stone); opacity:0.9; text-decoration:none; }
+  .utility-icons a svg{width:16px; height:16px;}
+  .utility-icons a[aria-disabled="true"]{ opacity:0.35; cursor:default; }
+  .utility-icons a:hover:not([aria-disabled="true"]){ color:var(--paper); opacity:1; }
+
+  /* ===== Disclaimer Gate ===== */
+  #gate{
+    position:fixed; inset:0; z-index:999;
+    background:var(--ink);
+    color:var(--stone);
+    display:flex; align-items:center; justify-content:center;
+    padding:32px;
+  }
+  #gate.hidden{display:none;}
+  .gate-card{
+    max-width:620px;
+    text-align:center;
+    border:1px solid rgba(91,100,114,0.4);
+    padding:56px 44px;
+    background:var(--ink-2);
+  }
+  .gate-seal{width:64px; height:64px; margin:0 auto 22px; opacity:0.92;}
+  .gate-card h2{
+    color:var(--paper);
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:18px;
+  }
+  .gate-card p{
+    font-size:15px;
+    color:var(--stone);
+    margin:0 0 14px;
+  }
+  .gate-card p:last-of-type{margin-bottom:30px;}
+  .gate-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    background:transparent;
+    border:1px solid var(--brass);
+    color:var(--brass-light);
+    padding:14px 30px;
+    cursor:pointer;
+    transition:background .2s ease, color .2s ease;
+  }
+  .gate-btn:hover{background:var(--brass); color:var(--ink);}
+  .gate-note{
+    margin-top:22px;
+    font-size:12px;
+    color:#7d7869;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.03em;
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--hair);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:14px; text-decoration:none;}
+  .brand img{width:42px; height:42px;}
+  .brand-text{font-family:'Fraunces', serif; font-size:16.5px; color:var(--charcoal); line-height:1.2;}
+  .brand-text small{
+    display:block; font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.1em; color:var(--brass);
+    text-transform:uppercase; margin-top:3px;
+  }
+  nav ul{list-style:none; display:flex; gap:34px; margin:0; padding:0;}
+  nav ul a{
+    text-decoration:none; font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--charcoal); border-bottom:1px solid transparent; padding-bottom:3px;
+  }
+  nav ul a:hover{border-color:var(--brass);}
+  .nav-toggle{display:none;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px;
+    align-items:center;
+    padding-top:96px; padding-bottom:96px;
+    position:relative; z-index:2;
+  }
+  .hero .eyebrow{color:var(--brass-light);}
+  .hero h1{
+    font-size:clamp(34px, 4.4vw, 54px);
+    color:var(--paper);
+    margin-top:16px;
+    line-height:1.08;
+  }
+  .hero p.sub{
+    font-size:16.5px;
+    color:#cfc9bb;
+    max-width:46ch;
+    margin-top:22px;
+  }
+  .seal-holder{
+    position:relative; display:flex; align-items:center; justify-content:center;
+    width:100%; max-width:380px; aspect-ratio:1/1; margin:0 auto;
+  }
+  .seal-rings{position:absolute; inset:0; width:100%; height:100%;}
+  .seal-logo{
+    position:relative; width:52%; height:auto; z-index:2;
+    filter:drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+  }
+  .hero-strip{
+    display:flex; gap:0; flex-wrap:wrap;
+    border-top:1px solid rgba(91,100,114,0.3);
+    position:relative; z-index:2;
+  }
+  .hero-strip .wrap{
+    display:flex; padding-top:0; padding-bottom:0; gap:0;
+  }
+  .strip-item{
+    flex:1; min-width:180px;
+    padding:20px 26px;
+    border-right:1px solid rgba(91,100,114,0.22);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--stone); letter-spacing:0.02em;
+  }
+  .strip-item:last-child{border-right:none;}
+  .strip-item b{display:block; color:var(--brass-light); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;}
+
+  /* ===== Sections generic ===== */
+  section{padding:88px 0;}
+  section.alt{background:var(--paper-2);}
+  .section-head{max-width:680px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(26px,3vw,34px); margin-top:14px;}
+  .section-head p{color:var(--muted); margin-top:16px; font-size:16px;}
+  .rule{height:1px; background:var(--hair); width:100%; margin:0;}
+
+  /* ===== About ===== */
+  .about-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:64px; align-items:start;}
+  .about-grid p{margin:0 0 18px; font-size:16.5px; color:var(--charcoal);}
+  .about-figures{
+    border:1px solid var(--hair);
+    background:var(--card-bg);
+  }
+  .about-figures .row{
+    display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    padding:18px 24px; border-bottom:1px solid var(--hair);
+    font-size:14.5px;
+  }
+  .about-figures .row:last-child{border-bottom:none;}
+  .about-figures .row span:first-child{color:var(--muted-2); font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; flex-shrink:0;}
+  .about-figures .row span:last-child{font-family:'Fraunces', serif; font-size:16px; color:var(--charcoal); text-align:right;}
+
+  /* ===== Practice areas ===== */
+  .practice-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:var(--hair);
+    border:1px solid var(--hair);
+  }
+  .practice-card{
+    background:var(--card-bg); padding:34px 28px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .practice-card .num{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--brass);
+  }
+  .card-icon{
+    width:38px; height:38px; color:var(--brass);
+    margin-bottom:2px;
+  }
+  .card-icon svg{width:100%; height:100%; display:block;}
+  .practice-card h3{font-size:19px; font-weight:500;}
+  .practice-card p{font-size:14.8px; color:var(--muted); margin:0;}
+
+  /* ===== Credentials timeline ===== */
+  .cred-grid{display:grid; grid-template-columns:1.3fr 0.7fr; gap:56px; align-items:start;}
+
+  /* ===== Writings ===== */
+  .writings-list{border-top:1px solid var(--hair);}
+  .writing-item{
+    display:grid; grid-template-columns:150px 1fr auto;
+    gap:28px; align-items:start;
+    padding:28px 0; border-bottom:1px solid var(--hair);
+    text-decoration:none; color:inherit;
+  }
+  .writing-item .meta{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--muted-2);
+    letter-spacing:0.04em; padding-top:3px; line-height:1.8;
+  }
+  .writing-item h4{
+    font-family:'Fraunces', serif; font-weight:500; font-size:19px; color:var(--charcoal);
+    margin:0 0 8px;
+  }
+  .writing-item p{margin:0; font-size:14.8px; color:var(--muted);}
+  .writing-arrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--brass);
+    padding-top:4px; white-space:nowrap;
+  }
+  .writing-item:hover h4{color:var(--brass);}
+  .writing-item:hover .writing-arrow{text-decoration:underline;}
+  .cred-list{border-top:1px solid var(--hair);}
+  .cred-visual{
+    border:1px solid var(--hair);
+    background:var(--ink);
+    padding:36px 28px;
+    position:sticky; top:130px;
+  }
+  .cred-visual svg{width:100%; height:auto; color:var(--brass-light);}
+  .cred-visual p{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--stone);
+    letter-spacing:0.04em; text-align:center; margin:18px 0 0; line-height:1.7;
+  }
+  .ceremony-panel{
+    margin-top:48px;
+    border:1px solid var(--hair);
+    background:var(--card-bg);
+  }
+  .ceremony-panel img{width:100%; height:auto; display:block; filter:saturate(0.94) contrast(1.02);}
+  .ceremony-cap{
+    padding:16px 24px;
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--muted-2);
+    border-top:1px solid var(--hair);
+  }
+  .cred-item{
+    display:grid; grid-template-columns:160px 1fr;
+    gap:32px;
+    padding:26px 0;
+    border-bottom:1px solid var(--hair);
+  }
+  .cred-item .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--brass); letter-spacing:0.05em; padding-top:2px;
+  }
+  .cred-item h4{font-family:'Fraunces', serif; font-size:18.5px; font-weight:500; margin:0 0 6px;}
+  .cred-item p{margin:0; color:var(--muted); font-size:15px;}
+
+  /* ===== Contact ===== */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
+  .contact-block .eyebrow{margin-bottom:14px; display:block;}
+  .contact-block h3{font-size:22px; margin-bottom:18px;}
+  .contact-line{
+    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--hair);
+    font-size:15.5px; align-items:baseline; flex-wrap:wrap;
+  }
+  .contact-line .k{
+    width:120px; flex-shrink:0; font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted-2); padding-top:2px;
+  }
+  .contact-line .v{color:var(--charcoal);}
+  .contact-line a.v-link{color:var(--brass); text-decoration:underline; text-underline-offset:3px;}
+  .contact-social{display:flex; gap:12px; align-items:center;}
+  .contact-social a{
+    display:flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--hair); border-radius:50%;
+    color:var(--charcoal); text-decoration:none;
+  }
+  .contact-social a svg{width:16px; height:16px;}
+  .contact-social a[aria-disabled="true"]{opacity:0.4;}
+  .contact-social a:not([aria-disabled="true"]):hover{background:var(--brass); color:var(--paper); border-color:var(--brass);}
+  .placeholder{color:var(--oxblood); font-style:italic;}
+  .office-notice{
+    margin-top:26px; padding:18px 20px; background:var(--card-bg);
+    border:1px solid var(--hair); font-size:13.5px; color:var(--muted);
+  }
+
+  /* ===== Footer / Disclaimer ===== */
+  footer{background:var(--ink); color:var(--stone); padding:56px 0 34px;}
+  footer .wrap{}
+  .foot-top{
+    display:grid; grid-template-columns:1.2fr 1fr; gap:50px;
+    padding-bottom:36px; border-bottom:1px solid rgba(91,100,114,0.25);
+  }
+  .foot-top h4{color:var(--paper); font-size:15px; font-family:'Fraunces', serif; font-weight:500; margin-bottom:12px;}
+  .foot-top p{font-size:13px; line-height:1.75; color:#a29c8d; margin:0;}
+  .foot-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:24px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.04em; color:#726c5e;
+    flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width: 860px){
+    .nav ul{display:none;}
+    .utility-bar .wrap{justify-content:center;}
+    .hero .wrap{grid-template-columns:1fr; padding-top:64px; padding-bottom:56px;}
+    .seal-holder{order:-1; max-width:220px; margin:0 auto 20px;}
+    .hero-strip .wrap{flex-direction:column;}
+    .strip-item{border-right:none; border-bottom:1px solid rgba(91,100,114,0.22);}
+    .about-grid, .contact-grid, .cred-grid{grid-template-columns:1fr; gap:36px;}
+    .cred-visual{position:static; max-width:260px; margin:0 auto;}
+    .practice-grid{grid-template-columns:1fr;}
+    .cred-item{grid-template-columns:1fr; gap:6px;}
+    .writing-item{grid-template-columns:1fr; gap:8px;}
+    .writing-item .writing-arrow{padding-top:0;}
+    .foot-top{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content" data-i18n="skip.link">Skip to main content</a>
+
+<!-- ============ UTILITY BAR: Language / Theme / Text Size ============ -->
+<div class="utility-bar" role="region" aria-label="Site preferences">
+  <div class="wrap">
+    <div class="utility-group" role="group" aria-label="Change language">
+      <span class="lbl" data-i18n="utility.lang_label">Language</span>
+      <button type="button" class="utility-btn lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="utility-btn lang-btn" data-lang="hi" aria-pressed="false">हिं</button>
+      <button type="button" class="utility-btn lang-btn" data-lang="pa" aria-pressed="false">ਪੰ</button>
+    </div>
+    <div class="utility-group" role="group" aria-label="Change colour theme">
+      <span class="lbl" data-i18n="utility.theme_label">Theme</span>
+      <button type="button" class="utility-btn" id="themeToggle" aria-pressed="false"><span data-i18n="utility.theme_light">Light</span> / <span data-i18n="utility.theme_dark">Dark</span></button>
+    </div>
+    <div class="utility-group" role="group" aria-label="Adjust text size">
+      <span class="lbl" data-i18n="utility.textsize_label">Text Size</span>
+      <button type="button" class="utility-btn" id="textSizeToggle" aria-pressed="false">A+</button>
+    </div>
+    <div class="utility-icons" aria-label="Quick contact">
+      <a href="https://wa.me/917717367792" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.34 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.27-4.37c0-4.54 3.7-8.24 8.26-8.24 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.84c0 4.55-3.7 8.21-8.26 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31s-.87.85-.87 2.08.89 2.41 1.02 2.58c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+      </a>
+      <a href="mailto:advocatearunphougat@gmail.com" aria-label="Email the office">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
+      </a>
+      <a href="#" aria-disabled="true" aria-label="X (Twitter) — page coming soon" title="Coming soon" onclick="return false;">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2H21l-6.55 7.49L22.2 22h-6.2l-4.86-6.36L5.6 22H2.83l7-8.01L1.8 2h6.35l4.4 5.82L18.24 2Zm-1.09 18h1.72L7.03 3.9H5.18L17.15 20Z"/></svg>
+      </a>
+      <a href="#" aria-disabled="true" aria-label="Instagram — page coming soon" title="Coming soon" onclick="return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DISCLAIMER GATE (required before viewing site content) ============ -->
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gate-card">
+    <img class="gate-seal" src="logo_clean.png" alt="">
+    <div class="eyebrow" data-i18n="gate.eyebrow">Bar Council of India Rules — Disclaimer</div>
+    <h2 id="gateTitle">Law Offices of Arun Kumar</h2>
+    <p data-i18n="gate.p1">The rules of the Bar Council of India do not permit advocates to solicit work or advertise. By clicking "I Agree" below, you acknowledge that:</p>
+    <p style="text-align:left;" data-i18n-html="gate.list">— You are seeking information about the Firm on your own accord and volition, and there has been no solicitation, invitation, or inducement of any sort from the Firm or its members.<br><br>
+    — This website is for informational purposes only and does not constitute legal advice. No advocate-client relationship is created by accessing this site.<br><br>
+    — The information provided on this website is not to be construed as an advertisement for the purposes of the Advocates Act, 1961, or the Rules framed thereunder by the Bar Council of India.</p>
+    <button class="gate-btn" id="gateEnter" data-i18n="gate.btn">I Understand &amp; Agree — Enter Site</button>
+    <div class="gate-note">धर्मो रक्षति रक्षितः</div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="logo_clean.png" alt="Law Offices of Arun Kumar seal">
+      <span class="brand-text">Law Offices of<br>Arun Kumar<small data-i18n="brand.tagline">Advocate · Punjab &amp; Haryana High Court</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about" data-i18n="nav.about">Background</a></li>
+        <li><a href="#credentials" data-i18n="nav.credentials">Credentials</a></li>
+        <li><a href="#practice" data-i18n="nav.practice">Areas of Practice</a></li>
+        <li><a href="#writings" data-i18n="nav.writings">Writings</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i18n="hero.eyebrow">Law Offices of Arun Kumar</div>
+      <h1 data-i18n="hero.h1">An independent legal&nbsp;practice at the meeting point of technology&nbsp;and&nbsp;law.</h1>
+      <p class="sub" data-i18n="hero.sub">Advocate, enrolled with the Bar Council of Punjab and Haryana. Practising before the Punjab &amp; Haryana High Court, Chandigarh, and other courts and tribunals. Background in computer science engineering and enterprise software before transitioning to the practice of law.</p>
+    </div>
+    <div class="seal-holder">
+      <svg class="seal-rings" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="200" cy="200" r="188" fill="none" stroke="#5b6472" stroke-width="1" opacity="0.55"/>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="#5b6472" stroke-width="0.6" opacity="0.35"/>
+        <g stroke="#5b6472" stroke-width="1" fill="none" opacity="0.55">
+          <path d="M200 12 V50 M200 12 h18 M200 50 h-14 v10"/>
+          <path d="M200 388 V350 M200 388 h-18 M200 350 h14 v-10"/>
+          <path d="M12 200 H50 M12 200 v18 M50 200 v-14 h10"/>
+          <path d="M388 200 H350 M388 200 v-18 M350 200 v14 h-10"/>
+          <path d="M67 67 L92 92 M67 67 v18 M92 92 h-14"/>
+          <path d="M333 67 L308 92 M333 67 v18 M308 92 h14"/>
+          <path d="M67 333 L92 308 M67 333 v-18 M92 308 h-14"/>
+          <path d="M333 333 L308 308 M333 333 v-18 M308 308 h14"/>
+        </g>
+        <g fill="#5b6472" opacity="0.7">
+          <circle cx="50" cy="50" r="3"/><circle cx="350" cy="50" r="3"/>
+          <circle cx="50" cy="350" r="3"/><circle cx="350" cy="350" r="3"/>
+          <circle cx="200" cy="50" r="2.4"/><circle cx="200" cy="350" r="2.4"/>
+          <circle cx="50" cy="200" r="2.4"/><circle cx="350" cy="200" r="2.4"/>
+        </g>
+      </svg>
+      <img class="seal-logo" src="logo_clean.png" alt="Law Offices of Arun Kumar seal">
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="strip-item"><b data-i18n="strip1.b">Enrolled Advocate</b><span data-i18n="strip1.v">Bar Council of Punjab &amp; Haryana</span></div>
+      <div class="strip-item"><b data-i18n="strip2.b">Practising Before</b><span data-i18n="strip2.v">Punjab &amp; Haryana High Court, Chandigarh &amp; other Courts/Tribunals</span></div>
+      <div class="strip-item"><b data-i18n="strip3.b">Engineering Background</b><span data-i18n="strip3.v">B.Tech, Computer Science &amp; Engineering</span></div>
+      <div class="strip-item"><b data-i18n="strip4.b">Industry Experience</b><span data-i18n="strip4.v">9 years, IT — India &amp; United States; TeamConnect customization</span></div>
+      <div class="strip-item"><b data-i18n="strip5.b">Litigation Focus</b><span data-i18n="strip5.v">Criminal, Civil, Writ, Commercial &amp; Technology Law</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / BACKGROUND ============ -->
+<section id="about" aria-labelledby="aboutHead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="about.eyebrow">/* Background */</div>
+      <h2 id="aboutHead" data-i18n="about.h2">From enterprise software to the bar.</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p data-i18n="about.p1">Arun Kumar is an Advocate enrolled with the Bar Council of Punjab and Haryana. Prior to the practice of law, he trained as an engineer, holding a Bachelor of Technology degree in Computer Science and Engineering.</p>
+        <p data-i18n="about.p2">He spent nine years in the information technology industry across India and the United States, including a role with Tech Mahindra Americas, working primarily as a Java developer and in service virtualization — a discipline concerned with simulating the behaviour of complex, interdependent software systems for testing and integration purposes.</p>
+        <p data-i18n="about.p3">As a Java developer, he worked on the customization of TeamConnect, a widely recognised legal matter management system, in engagements with enterprise clients — including Fortune 500 companies.</p>
+        <p data-i18n="about.p4">Having subsequently completed the Bachelor of Laws (LL.B.) and been enrolled as an Advocate, this background informs a practice oriented toward matters where legal questions and technical systems intersect — including software, data, and enterprise technology contexts — alongside a general litigation practice in criminal, civil, writ, and commercial matters.</p>
+        <p data-i18n="about.p5">This website is maintained solely to provide factual information about the Firm, in accordance with the Rules framed by the Bar Council of India under the Advocates Act, 1961. It is not intended, and should not be construed, as advertising or solicitation of legal work.</p>
+      </div>
+      <div class="about-figures">
+        <div class="row"><span data-i18n="row1.k">Degree</span><span data-i18n="row1.v">B.Tech — Computer Science &amp; Engineering</span></div>
+        <div class="row"><span data-i18n="row2.k">Prior Field</span><span data-i18n="row2.v">Java Development &amp; Service Virtualization</span></div>
+        <div class="row"><span data-i18n="row3.k">Prior Employer</span><span data-i18n="row3.v">Tech Mahindra Americas</span></div>
+        <div class="row"><span data-i18n="row4.k">Legal Technology</span><span data-i18n="row4.v">TeamConnect Customization (incl. Fortune 500 clients)</span></div>
+        <div class="row"><span data-i18n="row5.k">Prior Geography</span><span data-i18n="row5.v">India &amp; United States</span></div>
+        <div class="row"><span data-i18n="row6.k">Industry Tenure</span><span data-i18n="row6.v">9 years</span></div>
+        <div class="row"><span data-i18n="row7.k">Law Degree</span><span data-i18n="row7.v">LL.B. — Bachelor of Laws</span></div>
+        <div class="row"><span data-i18n="row8.k">Enrolling Body</span><span data-i18n="row8.v">Bar Council of Punjab &amp; Haryana</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ CREDENTIALS (moved directly after Background) ============ -->
+<section id="credentials" aria-labelledby="credHead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="cred.eyebrow">/* Credentials */</div>
+      <h2 id="credHead" data-i18n="cred.h2">Qualifications.</h2>
+    </div>
+    <div class="cred-grid">
+    <div class="cred-list">
+      <div class="cred-item">
+        <div class="tag" data-i18n="c1.tag">Education</div>
+        <div><h4 data-i18n="c1.h">B.Tech, Computer Science &amp; Engineering</h4><p data-i18n="c1.p">Foundational training in software systems, engineering, and computing.</p></div>
+      </div>
+      <div class="cred-item">
+        <div class="tag" data-i18n="c2.tag">Industry</div>
+        <div><h4 data-i18n="c2.h">Java Developer &amp; Service Virtualization Specialist</h4><p data-i18n="c2.p">Nine years across roles in the information technology sector, in India and the United States, including with Tech Mahindra Americas.</p></div>
+      </div>
+      <div class="cred-item">
+        <div class="tag" data-i18n="c3.tag">Legal Technology</div>
+        <div><h4 data-i18n="c3.h">TeamConnect Customization</h4><p data-i18n="c3.p">Worked as a Java developer on the customization of TeamConnect, a leading legal matter management system, for enterprise clients including Fortune 500 companies.</p></div>
+      </div>
+      <div class="cred-item">
+        <div class="tag" data-i18n="c4.tag">Education</div>
+        <div><h4 data-i18n="c4.h">LL.B.</h4><p data-i18n="c4.p">Bachelor of Laws.</p></div>
+      </div>
+      <div class="cred-item">
+        <div class="tag" data-i18n="c5.tag">Enrolment</div>
+        <div><h4 data-i18n="c5.h">Enrolled Advocate</h4><p data-i18n="c5.p">Bar Council of Punjab and Haryana.</p></div>
+      </div>
+      <div class="cred-item">
+        <div class="tag" data-i18n="c6.tag">Practice</div>
+        <div><h4 data-i18n="c6.h">Courts &amp; Tribunals</h4><p data-i18n="c6.p">Punjab &amp; Haryana High Court, Chandigarh, and other courts and tribunals, in criminal, civil, writ, and commercial matters.</p></div>
+      </div>
+    </div>
+    <div class="cred-visual">
+      <svg viewBox="0 0 220 320" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="110" y1="18" x2="110" y2="302" stroke-dasharray="1 6" opacity="0.5"/>
+        <g transform="translate(110,40)">
+          <path d="M-38 0 L0 -14 L38 0 L0 14 Z"/>
+          <path d="M-20 6 V22 a20 8 0 0 0 40 0 V6"/>
+          <path d="M32 3 V24" stroke-width="1"/>
+          <circle cx="32" cy="26" r="1.6" fill="currentColor" stroke="none"/>
+        </g>
+        <g transform="translate(110,140)">
+          <circle r="30"/>
+          <path d="M-11 -10 L-21 0 L-11 10 M11 -10 L21 0 L11 10"/>
+        </g>
+        <g transform="translate(110,250)">
+          <line x1="0" y1="-26" x2="0" y2="20"/>
+          <line x1="-24" y1="20" x2="24" y2="20"/>
+          <line x1="-30" y1="-14" x2="30" y2="-14"/>
+          <path d="M-30 -14 L-40 4 a10 10 0 0 0 20 0 Z"/>
+          <path d="M30 -14 L20 4 a10 10 0 0 0 20 0 Z"/>
+          <circle cx="0" cy="-26" r="2" fill="currentColor" stroke="none"/>
+        </g>
+      </svg>
+      <p data-i18n="cred.visual.caption">ENGINEERING&nbsp;→&nbsp;INDUSTRY&nbsp;→&nbsp;LAW</p>
+    </div>
+    </div>
+    <div class="ceremony-panel">
+      <img src="ceremony.jpg" alt="Enrolment ceremony, Bar Council of Punjab and Haryana">
+      <div class="ceremony-cap" data-i18n="ceremony.cap">Enrolment as Advocate — Bar Council of Punjab &amp; Haryana</div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ PRACTICE AREAS ============ -->
+<section class="alt" id="practice" aria-labelledby="practiceHead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="practice.eyebrow">/* Areas of Practice */</div>
+      <h2 id="practiceHead" data-i18n="practice.h2">General litigation, and matters at the intersection of law and technology.</h2>
+      <p data-i18n="practice.p">In addition to a general litigation practice in Criminal, Civil (Original and Appellate), and Writ Jurisdiction matters, and Commercial Litigation, the areas below reflect a particular focus on Technology Law. These are furnished for factual, informational purposes only, as permitted under the Rules of the Bar Council of India, and do not constitute an offer, guarantee, or solicitation of engagement.</p>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-card">
+        <span class="num">01</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 5 L8 12 v9 c0 12 7 21 16 23 c9 -2 16 -11 16 -23 V12 Z"/>
+          <path d="M17 24 l5 5 9 -11"/>
+        </svg></div>
+        <h3 data-i18n="g1.h">Criminal Law</h3>
+        <p data-i18n="g1.p">Matters before criminal courts, including trial, bail, and criminal revision or appeal.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">02</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 40 h32 M12 40 V18 h8 v22 M28 40 V10 h8 v30" />
+          <path d="M6 18 L24 8 L42 18" />
+        </svg></div>
+        <h3 data-i18n="g2.h">Civil Litigation</h3>
+        <p data-i18n="g2.p">Original and appellate civil proceedings before civil courts and the High Court.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">03</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="6" width="28" height="36" rx="1.5"/>
+          <path d="M16 15 h16 M16 22 h16 M16 29 h10"/>
+          <circle cx="34" cy="33" r="6"/>
+          <path d="M34 30 v3 l2 2"/>
+        </svg></div>
+        <h3 data-i18n="g3.h">Writ Jurisdiction</h3>
+        <p data-i18n="g3.p">Petitions under Articles 226 and 227 of the Constitution of India before the High Court.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">04</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="16" width="36" height="22" rx="2"/>
+          <path d="M17 16 v-4 a3 3 0 0 1 3 -3 h8 a3 3 0 0 1 3 3 v4"/>
+          <path d="M6 25 h36"/>
+          <path d="M21 25 v4 h6 v-4"/>
+        </svg></div>
+        <h3 data-i18n="g4.h">Commercial Litigation</h3>
+        <p data-i18n="g4.p">Disputes arising from commercial contracts, partnerships, and business transactions.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">05</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 5 L41 12 V23 C41 34 33.5 41 24 44 C14.5 41 7 34 7 23 V12 Z"/>
+          <path d="M24 14 V34 M16 20 h16 M16 28 h16"/>
+          <circle cx="24" cy="14" r="1.6" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="20" r="1.4" fill="currentColor" stroke="none"/>
+          <circle cx="32" cy="20" r="1.4" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="28" r="1.4" fill="currentColor" stroke="none"/>
+          <circle cx="32" cy="28" r="1.4" fill="currentColor" stroke="none"/>
+        </svg></div>
+        <h3 data-i18n="p1.h">Information Technology Law</h3>
+        <p data-i18n="p1.p">Matters arising under the Information Technology Act and allied regulation of digital systems and electronic transactions.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">06</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="12" y="21" width="24" height="19" rx="1.5"/>
+          <path d="M17 21 V15 a7 7 0 0 1 14 0 V21"/>
+          <circle cx="24" cy="29" r="2.6" fill="currentColor" stroke="none"/>
+          <path d="M24 31.6 V35"/>
+          <path d="M4 24 h6 M4 24 v5 M38 24 h6 M44 24 v5"/>
+        </svg></div>
+        <h3 data-i18n="p2.h">Data Protection &amp; Privacy</h3>
+        <p data-i18n="p2.p">Questions concerning personal data handling, privacy obligations, and compliance under applicable Indian data protection law.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">07</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 5 h16 l7 7 V43 H13 Z"/>
+          <path d="M29 5 v7 h7"/>
+          <path d="M20 26 l-4 4 4 4 M26 26 l4 4 -4 4"/>
+        </svg></div>
+        <h3 data-i18n="p3.h">Software &amp; Technology Contracts</h3>
+        <p data-i18n="p3.p">Review and drafting of software licensing agreements, service-level agreements, and enterprise technology contracts.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">08</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 4 L42 14 V34 L24 44 L6 34 V14 Z"/>
+          <path d="M28.6 19.2 a6 6 0 1 0 0 9.6" stroke-linecap="round"/>
+          <path d="M24 4 V12 M24 36 V44 M6 14 L13 18 M42 14 L35 18 M6 34 L13 30 M42 34 L35 30"/>
+        </svg></div>
+        <h3 data-i18n="p4.h">Intellectual Property in Software</h3>
+        <p data-i18n="p4.p">Matters concerning copyright in source code, trade secrets, and IP considerations arising in software development.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">09</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="20" cy="20" r="13"/>
+          <path d="M29.5 29.5 L42 42"/>
+          <path d="M14 16 h3 M14 20 h4 M14 24 h3 M22 16 h4 M22 20 h3 M22 24 h4" stroke-width="1.2"/>
+        </svg></div>
+        <h3 data-i18n="p5.h">Cyber Law &amp; Electronic Evidence</h3>
+        <p data-i18n="p5.p">Matters involving electronic records, digital evidence, and offences under cyber law statutes.</p>
+      </div>
+      <div class="practice-card">
+        <span class="num">10</span>
+        <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 6 V34"/>
+          <path d="M12 34 h24"/>
+          <path d="M24 12 H10 M24 12 H38"/>
+          <path d="M10 12 L4 22 a6 6 0 0 0 12 0 Z"/>
+          <path d="M38 12 L32 22 a6 6 0 0 0 12 0 Z"/>
+          <circle cx="24" cy="8" r="1.6" fill="currentColor" stroke="none"/>
+        </svg></div>
+        <h3 data-i18n="p6.h">Technology Dispute Resolution</h3>
+        <p data-i18n="p6.p">Disputes arising from software delivery, IT services, and enterprise technology engagements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ WRITINGS ============ -->
+<section id="writings" aria-labelledby="writingsHead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="writings.eyebrow">/* Writings */</div>
+      <h2 id="writingsHead" data-i18n="writings.h2">Notes on law and technology.</h2>
+      <p data-i18n="writings.p">Independent commentary published from time to time, shared here for general reading. These pieces reflect personal analysis and academic discussion of publicly reported matters; they are not legal opinions on any specific case and should not be relied upon as advice. These articles are available in English on Medium.</p>
+    </div>
+    <div class="writings-list">
+      <a class="writing-item" href="https://arunphougat.medium.com/the-right-to-be-forgotten-and-the-right-to-erasure-a-narrative-of-indian-jurisprudence-14da2352a2fb" target="_blank" rel="noopener">
+        <div class="meta" data-i18n="w0.meta">Jul 2026<br>8 min read</div>
+        <div>
+          <h4 data-i18n="w0.h">The Right to be Forgotten and the Right to Erasure: A Narrative of Indian Jurisprudence</h4>
+          <p data-i18n="w0.p">Traces how Indian courts have shaped an unwritten "right to be forgotten" from Article 21 privacy jurisprudence, alongside the narrower statutory right to erasure under the DPDP Act, 2023, and the boundary between the two as the Supreme Court prepares to weigh in.</p>
+        </div>
+        <div class="writing-arrow" data-i18n="writing.read_more">Read on Medium ↗</div>
+      </a>
+      <a class="writing-item" href="https://medium.com/@arunphougat/epfo-data-leak-and-its-impacts-in-the-light-of-absence-of-data-protection-legislation-3f4a982676b1" target="_blank" rel="noopener">
+        <div class="meta" data-i18n="w1.meta">Aug 2022<br>5 min read</div>
+        <div>
+          <h4 data-i18n="w1.h">EPFO Data Leak and the Absence of Data Protection Legislation</h4>
+          <p data-i18n="w1.p">Looks at the reported exposure of Employees' Provident Fund Organisation data, and considers what it reveals about gaps in India's statutory data protection framework and the resulting risk to account holders.</p>
+        </div>
+        <div class="writing-arrow" data-i18n="writing.read_more">Read on Medium ↗</div>
+      </a>
+      <a class="writing-item" href="https://medium.com/@arunphougat/adoption-of-ml-and-ai-in-fintech-trust-and-confidence-2e851c56b8f0" target="_blank" rel="noopener">
+        <div class="meta" data-i18n="w2.meta">Aug 2021<br>5 min read</div>
+        <div>
+          <h4 data-i18n="w2.h">Adoption of ML and AI in Fintech — Trust and Confidence</h4>
+          <p data-i18n="w2.p">Examines how machine learning and AI systems have reshaped customer trust in banking, and the accompanying concerns around algorithmic bias and accountability.</p>
+        </div>
+        <div class="writing-arrow" data-i18n="writing.read_more">Read on Medium ↗</div>
+      </a>
+      <a class="writing-item" href="https://medium.com/@arunphougat/data-privacy-theories-sufficient-to-cover-modern-day-challenges-693f5b224412" target="_blank" rel="noopener">
+        <div class="meta" data-i18n="w3.meta">Aug 2021<br>6 min read</div>
+        <div>
+          <h4 data-i18n="w3.h">Data Privacy Theories — Sufficient to Cover Modern Day Challenges?</h4>
+          <p data-i18n="w3.p">Reviews classical and contextual-integrity theories of privacy against present-day data practices, in light of the Supreme Court's recognition of privacy as a fundamental right.</p>
+        </div>
+        <div class="writing-arrow" data-i18n="writing.read_more">Read on Medium ↗</div>
+      </a>
+      <a class="writing-item" href="https://medium.com/@arunphougat/digital-india-security-transparency-covid-19-fiasco-1b3b1ce8793" target="_blank" rel="noopener">
+        <div class="meta" data-i18n="w4.meta">May 2021<br>4 min read</div>
+        <div>
+          <h4 data-i18n="w4.h">Digital India: Security, Transparency, COVID-19 &amp; Fiasco?</h4>
+          <p data-i18n="w4.p">Considers gaps exposed in India's digital governance infrastructure during the pandemic, drawing on publicly reported data-handling incidents of that period.</p>
+        </div>
+        <div class="writing-arrow" data-i18n="writing.read_more">Read on Medium ↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ CONTACT ============ -->
+<section class="alt" id="contact" aria-labelledby="contactHead">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="contact.eyebrow">/* Contact */</div>
+      <h2 id="contactHead" data-i18n="contact.h2">Office information.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-block">
+        <span class="eyebrow" data-i18n="contact.block1.eyebrow">Reach the Office</span>
+        <h3 data-i18n="contact.block1.h3">Law Offices of Arun Kumar</h3>
+        <div class="contact-line"><div class="k" data-i18n="contact.address.k">Address</div><div class="v" data-i18n="contact.address.v">M.I.G 547, Phase&#8209;1, Urban Estate, Patiala, Punjab &#8212; 147002</div></div>
+        <div class="contact-line"><div class="k" data-i18n="contact.email.k">Email</div><div class="v"><a class="v-link" href="mailto:advocatearunphougat@gmail.com">advocatearunphougat@gmail.com</a></div></div>
+        <div class="contact-line"><div class="k" data-i18n="contact.whatsapp.k">WhatsApp</div><div class="v"><a class="v-link" href="https://wa.me/917717367792" target="_blank" rel="noopener">+91 77173 67792</a></div></div>
+        <div class="contact-line"><div class="k" data-i18n="contact.social.k">Social</div>
+          <div class="v contact-social">
+            <a href="#" aria-disabled="true" aria-label="X (Twitter) — coming soon" title="Coming soon" onclick="return false;">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2H21l-6.55 7.49L22.2 22h-6.2l-4.86-6.36L5.6 22H2.83l7-8.01L1.8 2h6.35l4.4 5.82L18.24 2Zm-1.09 18h1.72L7.03 3.9H5.18L17.15 20Z"/></svg>
+            </a>
+            <a href="#" aria-disabled="true" aria-label="Instagram — coming soon" title="Coming soon" onclick="return false;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </a>
+            <span class="placeholder" data-i18n="contact.social.v" style="font-size:12.5px; font-family:'IBM Plex Mono',monospace;">Pages coming soon</span>
+          </div>
+        </div>
+        <div class="contact-line"><div class="k" data-i18n="contact.enrolment.k">Enrolment</div><div class="v" data-i18n="contact.enrolment.v">Bar Council of Punjab &amp; Haryana</div></div>
+        <div class="contact-line"><div class="k" data-i18n="contact.practising.k">Practising Before</div><div class="v" data-i18n="contact.practising.v">Punjab &amp; Haryana High Court, Chandigarh &amp; other Courts/Tribunals</div></div>
+        <div class="office-notice" data-i18n="contact.notice">In keeping with the Rules of the Bar Council of India, this section is provided solely so that persons who independently seek to reach the Firm may do so. It is not an invitation to avail of legal services.</div>
+      </div>
+      <div class="contact-block">
+        <span class="eyebrow" data-i18n="contact.block2.eyebrow">Office Hours</span>
+        <h3 data-i18n="contact.block2.h3">Availability</h3>
+        <div class="contact-line"><div class="k" data-i18n="hours1.k">Mon – Sat</div><div class="v" data-i18n="hours1.v">6:00 PM – 8:00 PM</div></div>
+        <div class="contact-line"><div class="k" data-i18n="hours2.k">Sunday</div><div class="v" data-i18n="hours2.v">10:00 AM – 2:00 PM &amp; 6:00 PM – 8:00 PM</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER / STANDING DISCLAIMER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <h4 data-i18n="foot.disclaimer.h4">Disclaimer</h4>
+        <p data-i18n="foot.disclaimer.p">This website has been made available for informational purposes only and does not constitute, and should not be construed as, legal advice or advertising or solicitation of work under the Rules framed by the Bar Council of India under the Advocates Act, 1961. Access to and use of this website is entirely at the user's own volition and does not create an advocate-client relationship. The information contained herein is not intended to be a substitute for legal advice sought from an advocate in relation to particular facts and circumstances. The Firm disclaims liability for any consequence of any action taken by a user relying on material or information provided on this website.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.firm.h4">Firm</h4>
+        <p data-i18n="foot.firm.p">Law Offices of Arun Kumar<br>Advocate, enrolled with the Bar Council of Punjab &amp; Haryana.<br><br>This is an independent legal practice. No portion of this website should be regarded as comparing the Firm's services with those of any other advocate or firm.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> <span data-i18n="foot.copyright">Law Offices of Arun Kumar</span></span>
+      <span>धर्मो रक्षति रक्षितः</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ================= Disclaimer gate ================= */
+  var gate = document.getElementById('gate');
+  var enterBtn = document.getElementById('gateEnter');
+  try{
+    if(sessionStorage.getItem('lok_disclaimer_ack') === 'yes'){ gate.classList.add('hidden'); }
+  }catch(e){}
+  enterBtn.addEventListener('click', function(){
+    gate.classList.add('hidden');
+    try{ sessionStorage.setItem('lok_disclaimer_ack','yes'); }catch(e){}
+  });
+
+  /* ================= Theme toggle ================= */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('themeToggle');
+  function applyTheme(t){
+    root.setAttribute('data-theme', t);
+    themeBtn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+    try{ localStorage.setItem('lok_theme', t); }catch(e){}
+  }
+  var savedTheme = 'light';
+  try{ savedTheme = localStorage.getItem('lok_theme') || 'light'; }catch(e){}
+  applyTheme(savedTheme);
+  themeBtn.addEventListener('click', function(){
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ================= Text size toggle ================= */
+  var textBtn = document.getElementById('textSizeToggle');
+  function applyTextSize(large){
+    if(large){ root.setAttribute('data-textsize','lg'); } else { root.removeAttribute('data-textsize'); }
+    textBtn.setAttribute('aria-pressed', large ? 'true' : 'false');
+    try{ localStorage.setItem('lok_textsize', large ? 'lg' : ''); }catch(e){}
+  }
+  var savedSize = '';
+  try{ savedSize = localStorage.getItem('lok_textsize') || ''; }catch(e){}
+  applyTextSize(savedSize === 'lg');
+  textBtn.addEventListener('click', function(){
+    applyTextSize(root.getAttribute('data-textsize') !== 'lg');
+  });
+
+  /* ================= Language ================= */
+  var langButtons = document.querySelectorAll('.lang-btn');
+  var i18nEls = document.querySelectorAll('[data-i18n]');
+  var i18nHtmlEls = document.querySelectorAll('[data-i18n-html]');
+
+  var T = {
+    en: {
+      "skip.link":"Skip to main content",
+      "utility.lang_label":"Language","utility.theme_label":"Theme","utility.textsize_label":"Text Size",
+      "utility.theme_light":"Light","utility.theme_dark":"Dark",
+      "gate.eyebrow":"Bar Council of India Rules — Disclaimer",
+      "gate.p1":"The rules of the Bar Council of India do not permit advocates to solicit work or advertise. By clicking \"I Agree\" below, you acknowledge that:",
+      "gate.list":"— You are seeking information about the Firm on your own accord and volition, and there has been no solicitation, invitation, or inducement of any sort from the Firm or its members.<br><br>— This website is for informational purposes only and does not constitute legal advice. No advocate-client relationship is created by accessing this site.<br><br>— The information provided on this website is not to be construed as an advertisement for the purposes of the Advocates Act, 1961, or the Rules framed thereunder by the Bar Council of India.",
+      "gate.btn":"I Understand & Agree — Enter Site",
+      "brand.tagline":"Advocate · Punjab & Haryana High Court",
+      "nav.about":"Background","nav.credentials":"Credentials","nav.practice":"Areas of Practice","nav.writings":"Writings","nav.contact":"Contact",
+      "hero.eyebrow":"Law Offices of Arun Kumar",
+      "hero.h1":"An independent legal\u00A0practice at the meeting point of technology\u00A0and\u00A0law.",
+      "hero.sub":"Advocate, enrolled with the Bar Council of Punjab and Haryana. Practising before the Punjab & Haryana High Court, Chandigarh, and other courts and tribunals. Background in computer science engineering and enterprise software before transitioning to the practice of law.",
+      "strip1.b":"Enrolled Advocate","strip1.v":"Bar Council of Punjab & Haryana",
+      "strip2.b":"Practising Before","strip2.v":"Punjab & Haryana High Court, Chandigarh & other Courts/Tribunals",
+      "strip3.b":"Engineering Background","strip3.v":"B.Tech, Computer Science & Engineering",
+      "strip4.b":"Industry Experience","strip4.v":"9 years, IT — India & United States; TeamConnect customization",
+      "strip5.b":"Litigation Focus","strip5.v":"Criminal, Civil, Writ, Commercial & Technology Law",
+      "about.eyebrow":"/* Background */","about.h2":"From enterprise software to the bar.",
+      "about.p1":"Arun Kumar is an Advocate enrolled with the Bar Council of Punjab and Haryana. Prior to the practice of law, he trained as an engineer, holding a Bachelor of Technology degree in Computer Science and Engineering.",
+      "about.p2":"He spent nine years in the information technology industry across India and the United States, including a role with Tech Mahindra Americas, working primarily as a Java developer and in service virtualization — a discipline concerned with simulating the behaviour of complex, interdependent software systems for testing and integration purposes.",
+      "about.p3":"As a Java developer, he worked on the customization of TeamConnect, a widely recognised legal matter management system, in engagements with enterprise clients — including Fortune 500 companies.",
+      "about.p4":"Having subsequently completed the Bachelor of Laws (LL.B.) and been enrolled as an Advocate, this background informs a practice oriented toward matters where legal questions and technical systems intersect — including software, data, and enterprise technology contexts — alongside a general litigation practice in criminal, civil, writ, and commercial matters.",
+      "about.p5":"This website is maintained solely to provide factual information about the Firm, in accordance with the Rules framed by the Bar Council of India under the Advocates Act, 1961. It is not intended, and should not be construed, as advertising or solicitation of legal work.",
+      "row1.k":"Degree","row1.v":"B.Tech — Computer Science & Engineering",
+      "row2.k":"Prior Field","row2.v":"Java Development & Service Virtualization",
+      "row3.k":"Prior Employer","row3.v":"Tech Mahindra Americas",
+      "row4.k":"Legal Technology","row4.v":"TeamConnect Customization (incl. Fortune 500 clients)",
+      "row5.k":"Prior Geography","row5.v":"India & United States",
+      "row6.k":"Industry Tenure","row6.v":"9 years",
+      "row7.k":"Law Degree","row7.v":"LL.B. — Bachelor of Laws",
+      "row8.k":"Enrolling Body","row8.v":"Bar Council of Punjab & Haryana",
+      "cred.eyebrow":"/* Credentials */","cred.h2":"Qualifications.",
+      "c1.tag":"Education","c1.h":"B.Tech, Computer Science & Engineering","c1.p":"Foundational training in software systems, engineering, and computing.",
+      "c2.tag":"Industry","c2.h":"Java Developer & Service Virtualization Specialist","c2.p":"Nine years across roles in the information technology sector, in India and the United States, including with Tech Mahindra Americas.",
+      "c3.tag":"Legal Technology","c3.h":"TeamConnect Customization","c3.p":"Worked as a Java developer on the customization of TeamConnect, a leading legal matter management system, for enterprise clients including Fortune 500 companies.",
+      "c4.tag":"Education","c4.h":"LL.B.","c4.p":"Bachelor of Laws.",
+      "c5.tag":"Enrolment","c5.h":"Enrolled Advocate","c5.p":"Bar Council of Punjab and Haryana.",
+      "c6.tag":"Practice","c6.h":"Courts & Tribunals","c6.p":"Punjab & Haryana High Court, Chandigarh, and other courts and tribunals, in criminal, civil, writ, and commercial matters.",
+      "cred.visual.caption":"ENGINEERING\u00A0→\u00A0INDUSTRY\u00A0→\u00A0LAW",
+      "ceremony.cap":"Enrolment as Advocate — Bar Council of Punjab & Haryana",
+      "practice.eyebrow":"/* Areas of Practice */",
+      "practice.h2":"General litigation, and matters at the intersection of law and technology.",
+      "practice.p":"In addition to a general litigation practice in Criminal, Civil (Original and Appellate), and Writ Jurisdiction matters, and Commercial Litigation, the areas below reflect a particular focus on Technology Law. These are furnished for factual, informational purposes only, as permitted under the Rules of the Bar Council of India, and do not constitute an offer, guarantee, or solicitation of engagement.",
+      "g1.h":"Criminal Law","g1.p":"Matters before criminal courts, including trial, bail, and criminal revision or appeal.",
+      "g2.h":"Civil Litigation","g2.p":"Original and appellate civil proceedings before civil courts and the High Court.",
+      "g3.h":"Writ Jurisdiction","g3.p":"Petitions under Articles 226 and 227 of the Constitution of India before the High Court.",
+      "g4.h":"Commercial Litigation","g4.p":"Disputes arising from commercial contracts, partnerships, and business transactions.",
+      "p1.h":"Information Technology Law","p1.p":"Matters arising under the Information Technology Act and allied regulation of digital systems and electronic transactions.",
+      "p2.h":"Data Protection & Privacy","p2.p":"Questions concerning personal data handling, privacy obligations, and compliance under applicable Indian data protection law.",
+      "p3.h":"Software & Technology Contracts","p3.p":"Review and drafting of software licensing agreements, service-level agreements, and enterprise technology contracts.",
+      "p4.h":"Intellectual Property in Software","p4.p":"Matters concerning copyright in source code, trade secrets, and IP considerations arising in software development.",
+      "p5.h":"Cyber Law & Electronic Evidence","p5.p":"Matters involving electronic records, digital evidence, and offences under cyber law statutes.",
+      "p6.h":"Technology Dispute Resolution","p6.p":"Disputes arising from software delivery, IT services, and enterprise technology engagements.",
+      "writings.eyebrow":"/* Writings */","writings.h2":"Notes on law and technology.",
+      "writings.p":"Independent commentary published from time to time, shared here for general reading. These pieces reflect personal analysis and academic discussion of publicly reported matters; they are not legal opinions on any specific case and should not be relied upon as advice. These articles are available in English on Medium.",
+      "writing.read_more":"Read on Medium ↗",
+      "w0.meta":"Jul 2026<br>8 min read","w0.h":"The Right to be Forgotten and the Right to Erasure: A Narrative of Indian Jurisprudence","w0.p":"Traces how Indian courts have shaped an unwritten \"right to be forgotten\" from Article 21 privacy jurisprudence, alongside the narrower statutory right to erasure under the DPDP Act, 2023, and the boundary between the two as the Supreme Court prepares to weigh in.",
+      "w1.meta":"Aug 2022<br>5 min read","w1.h":"EPFO Data Leak and the Absence of Data Protection Legislation","w1.p":"Looks at the reported exposure of Employees' Provident Fund Organisation data, and considers what it reveals about gaps in India's statutory data protection framework and the resulting risk to account holders.",
+      "w2.meta":"Aug 2021<br>5 min read","w2.h":"Adoption of ML and AI in Fintech — Trust and Confidence","w2.p":"Examines how machine learning and AI systems have reshaped customer trust in banking, and the accompanying concerns around algorithmic bias and accountability.",
+      "w3.meta":"Aug 2021<br>6 min read","w3.h":"Data Privacy Theories — Sufficient to Cover Modern Day Challenges?","w3.p":"Reviews classical and contextual-integrity theories of privacy against present-day data practices, in light of the Supreme Court's recognition of privacy as a fundamental right.",
+      "w4.meta":"May 2021<br>4 min read","w4.h":"Digital India: Security, Transparency, COVID-19 & Fiasco?","w4.p":"Considers gaps exposed in India's digital governance infrastructure during the pandemic, drawing on publicly reported data-handling incidents of that period.",
+      "contact.eyebrow":"/* Contact */","contact.h2":"Office information.",
+      "contact.block1.eyebrow":"Reach the Office","contact.block1.h3":"Law Offices of Arun Kumar",
+      "contact.address.k":"Address","contact.address.v":"M.I.G 547, Phase\u20111, Urban Estate, Patiala, Punjab \u2014 147002",
+      "contact.email.k":"Email","contact.whatsapp.k":"WhatsApp","contact.social.k":"Social","contact.social.v":"Pages coming soon",
+      "contact.enrolment.k":"Enrolment","contact.enrolment.v":"Bar Council of Punjab & Haryana",
+      "contact.practising.k":"Practising Before","contact.practising.v":"Punjab & Haryana High Court, Chandigarh & other Courts/Tribunals",
+      "contact.notice":"In keeping with the Rules of the Bar Council of India, this section is provided solely so that persons who independently seek to reach the Firm may do so. It is not an invitation to avail of legal services.",
+      "contact.block2.eyebrow":"Office Hours","contact.block2.h3":"Availability",
+      "hours1.k":"Mon – Sat","hours1.v":"6:00 PM – 8:00 PM",
+      "hours2.k":"Sunday","hours2.v":"10:00 AM – 2:00 PM & 6:00 PM – 8:00 PM",
+      "foot.disclaimer.h4":"Disclaimer",
+      "foot.disclaimer.p":"This website has been made available for informational purposes only and does not constitute, and should not be construed as, legal advice or advertising or solicitation of work under the Rules framed by the Bar Council of India under the Advocates Act, 1961. Access to and use of this website is entirely at the user's own volition and does not create an advocate-client relationship. The information contained herein is not intended to be a substitute for legal advice sought from an advocate in relation to particular facts and circumstances. The Firm disclaims liability for any consequence of any action taken by a user relying on material or information provided on this website.",
+      "foot.firm.h4":"Firm",
+      "foot.firm.p":"Law Offices of Arun Kumar<br>Advocate, enrolled with the Bar Council of Punjab & Haryana.<br><br>This is an independent legal practice. No portion of this website should be regarded as comparing the Firm's services with those of any other advocate or firm.",
+      "foot.copyright":"Law Offices of Arun Kumar"
+    },
+    hi: {
+      "skip.link":"मुख्य सामग्री पर जाएँ",
+      "utility.lang_label":"भाषा","utility.theme_label":"रंग विषय","utility.textsize_label":"टेक्स्ट आकार",
+      "utility.theme_light":"हल्का","utility.theme_dark":"गहरा",
+      "gate.eyebrow":"बार काउंसिल ऑफ़ इंडिया नियम — अस्वीकरण",
+      "gate.p1":"बार काउंसिल ऑफ़ इंडिया के नियम अधिवक्ताओं को कार्य के लिए आग्रह करने या विज्ञापन देने की अनुमति नहीं देते। नीचे \"मैं सहमत हूँ\" पर क्लिक करके, आप स्वीकार करते हैं कि:",
+      "gate.list":"— आप स्वयं की इच्छा से फ़र्म के बारे में जानकारी प्राप्त कर रहे हैं, और फ़र्म या इसके सदस्यों की ओर से किसी प्रकार का आग्रह, आमंत्रण या प्रेरणा नहीं दी गई है।<br><br>— यह वेबसाइट केवल सूचनात्मक उद्देश्यों के लिए है और यह विधिक सलाह नहीं है। इस साइट तक पहुँचने से कोई अधिवक्ता-मुवक्किल संबंध स्थापित नहीं होता।<br><br>— इस वेबसाइट पर दी गई जानकारी को अधिवक्ता अधिनियम, 1961 अथवा उसके अंतर्गत बार काउंसिल ऑफ़ इंडिया द्वारा बनाए गए नियमों के प्रयोजन हेतु विज्ञापन नहीं माना जाना चाहिए।",
+      "gate.btn":"मैं समझता/समझती हूँ और सहमत हूँ — साइट में प्रवेश करें",
+      "brand.tagline":"अधिवक्ता · पंजाब एवं हरियाणा उच्च न्यायालय",
+      "nav.about":"पृष्ठभूमि","nav.credentials":"योग्यताएँ","nav.practice":"अभ्यास के क्षेत्र","nav.writings":"लेख","nav.contact":"संपर्क",
+      "hero.eyebrow":"लॉ ऑफिसेज़ ऑफ अरुण कुमार",
+      "hero.h1":"प्रौद्योगिकी और कानून के संगम पर एक स्वतंत्र विधिक अभ्यास।",
+      "hero.sub":"अधिवक्ता, बार काउंसिल ऑफ़ पंजाब एवं हरियाणा में नामांकित। पंजाब एवं हरियाणा उच्च न्यायालय, चंडीगढ़, तथा अन्य न्यायालयों एवं न्यायाधिकरणों के समक्ष अभ्यासरत। विधि व्यवसाय में आने से पूर्व कंप्यूटर विज्ञान अभियांत्रिकी एवं एंटरप्राइज़ सॉफ्टवेयर की पृष्ठभूमि।",
+      "strip1.b":"नामांकित अधिवक्ता","strip1.v":"बार काउंसिल ऑफ़ पंजाब एवं हरियाणा",
+      "strip2.b":"अभ्यासरत न्यायालय","strip2.v":"पंजाब एवं हरियाणा उच्च न्यायालय, चंडीगढ़ एवं अन्य न्यायालय/न्यायाधिकरण",
+      "strip3.b":"अभियांत्रिकी पृष्ठभूमि","strip3.v":"बी.टेक, कंप्यूटर विज्ञान एवं अभियांत्रिकी",
+      "strip4.b":"उद्योग अनुभव","strip4.v":"9 वर्ष, आईटी — भारत एवं संयुक्त राज्य अमेरिका; टीमकनेक्ट कस्टमाइज़ेशन",
+      "strip5.b":"मुकदमेबाज़ी फोकस","strip5.v":"फौजदारी, दीवानी, रिट, वाणिज्यिक एवं प्रौद्योगिकी विधि",
+      "about.eyebrow":"/* पृष्ठभूमि */","about.h2":"एंटरप्राइज़ सॉफ्टवेयर से बार तक।",
+      "about.p1":"अरुण कुमार बार काउंसिल ऑफ़ पंजाब एवं हरियाणा में नामांकित एक अधिवक्ता हैं। विधि व्यवसाय में आने से पूर्व, उन्होंने एक इंजीनियर के रूप में प्रशिक्षण प्राप्त किया, कंप्यूटर विज्ञान एवं अभियांत्रिकी में बैचलर ऑफ़ टेक्नोलॉजी की उपाधि धारण करते हुए।",
+      "about.p2":"उन्होंने भारत एवं संयुक्त राज्य अमेरिका में सूचना प्रौद्योगिकी उद्योग में नौ वर्ष बिताए, जिसमें टेक महिंद्रा अमेरिकाज़ के साथ एक भूमिका शामिल है, मुख्यतः एक जावा डेवलपर के रूप में तथा सर्विस वर्चुअलाइज़ेशन में कार्य करते हुए — यह एक ऐसा क्षेत्र है जो परीक्षण एवं एकीकरण के उद्देश्य से जटिल, परस्पर-निर्भर सॉफ्टवेयर प्रणालियों के व्यवहार का अनुकरण करने से संबंधित है।",
+      "about.p3":"एक जावा डेवलपर के रूप में, उन्होंने टीमकनेक्ट के कस्टमाइज़ेशन पर कार्य किया, जो एक व्यापक रूप से मान्यता प्राप्त लीगल मैटर मैनेजमेंट सिस्टम है, तथा फॉर्च्यून 500 कंपनियों सहित एंटरप्राइज़ ग्राहकों के साथ जुड़ाव में कार्य किया।",
+      "about.p4":"तत्पश्चात बैचलर ऑफ़ लॉज़ (एल.एल.बी.) पूर्ण करने एवं अधिवक्ता के रूप में नामांकित होने के बाद, यह पृष्ठभूमि एक ऐसे अभ्यास को दिशा देती है जो विधिक प्रश्नों एवं तकनीकी प्रणालियों के प्रतिच्छेदन से संबंधित मामलों की ओर उन्मुख है — जिसमें सॉफ्टवेयर, डेटा एवं एंटरप्राइज़ प्रौद्योगिकी संदर्भ शामिल हैं — साथ ही फौजदारी, दीवानी, रिट एवं वाणिज्यिक मामलों में सामान्य मुकदमेबाज़ी अभ्यास भी।",
+      "about.p5":"यह वेबसाइट केवल फ़र्म के बारे में तथ्यात्मक जानकारी प्रदान करने हेतु बनाए रखी गई है, जो अधिवक्ता अधिनियम, 1961 के अंतर्गत बार काउंसिल ऑफ़ इंडिया द्वारा बनाए गए नियमों के अनुरूप है। इसे विज्ञापन या विधिक कार्य हेतु आग्रह के रूप में न तो आशयित किया गया है, न ही समझा जाना चाहिए।",
+      "row1.k":"उपाधि","row1.v":"बी.टेक — कंप्यूटर विज्ञान एवं अभियांत्रिकी",
+      "row2.k":"पूर्व क्षेत्र","row2.v":"जावा डेवलपमेंट एवं सर्विस वर्चुअलाइज़ेशन",
+      "row3.k":"पूर्व नियोक्ता","row3.v":"टेक महिंद्रा अमेरिकाज़",
+      "row4.k":"लीगल टेक्नोलॉजी","row4.v":"टीमकनेक्ट कस्टमाइज़ेशन (फॉर्च्यून 500 ग्राहकों सहित)",
+      "row5.k":"पूर्व भौगोलिक क्षेत्र","row5.v":"भारत एवं संयुक्त राज्य अमेरिका",
+      "row6.k":"उद्योग कार्यकाल","row6.v":"9 वर्ष",
+      "row7.k":"विधि उपाधि","row7.v":"एल.एल.बी. — बैचलर ऑफ़ लॉज़",
+      "row8.k":"नामांकन निकाय","row8.v":"बार काउंसिल ऑफ़ पंजाब एवं हरियाणा",
+      "cred.eyebrow":"/* योग्यताएँ */","cred.h2":"अर्हताएँ।",
+      "c1.tag":"शिक्षा","c1.h":"बी.टेक, कंप्यूटर विज्ञान एवं अभियांत्रिकी","c1.p":"सॉफ्टवेयर प्रणालियों, अभियांत्रिकी एवं कंप्यूटिंग में आधारभूत प्रशिक्षण।",
+      "c2.tag":"उद्योग","c2.h":"जावा डेवलपर एवं सर्विस वर्चुअलाइज़ेशन विशेषज्ञ","c2.p":"भारत एवं संयुक्त राज्य अमेरिका में सूचना प्रौद्योगिकी क्षेत्र की भूमिकाओं में नौ वर्ष, जिसमें टेक महिंद्रा अमेरिकाज़ शामिल है।",
+      "c3.tag":"लीगल टेक्नोलॉजी","c3.h":"टीमकनेक्ट कस्टमाइज़ेशन","c3.p":"एक जावा डेवलपर के रूप में, टीमकनेक्ट — एक अग्रणी लीगल मैटर मैनेजमेंट सिस्टम — के कस्टमाइज़ेशन पर फॉर्च्यून 500 कंपनियों सहित एंटरप्राइज़ ग्राहकों के लिए कार्य किया।",
+      "c4.tag":"शिक्षा","c4.h":"एल.एल.बी.","c4.p":"बैचलर ऑफ़ लॉज़।",
+      "c5.tag":"नामांकन","c5.h":"नामांकित अधिवक्ता","c5.p":"बार काउंसिल ऑफ़ पंजाब एवं हरियाणा।",
+      "c6.tag":"अभ्यास","c6.h":"न्यायालय एवं न्यायाधिकरण","c6.p":"पंजाब एवं हरियाणा उच्च न्यायालय, चंडीगढ़, तथा अन्य न्यायालयों एवं न्यायाधिकरणों में, फौजदारी, दीवानी, रिट एवं वाणिज्यिक मामलों में।",
+      "cred.visual.caption":"अभियांत्रिकी → उद्योग → विधि",
+      "ceremony.cap":"अधिवक्ता के रूप में नामांकन — बार काउंसिल ऑफ़ पंजाब एवं हरियाणा",
+      "practice.eyebrow":"/* अभ्यास के क्षेत्र */",
+      "practice.h2":"सामान्य मुकदमेबाज़ी, तथा कानून एवं प्रौद्योगिकी के प्रतिच्छेदन से जुड़े मामले।",
+      "practice.p":"फौजदारी, दीवानी (मूल एवं अपीलीय) तथा रिट क्षेत्राधिकार के मामलों, एवं वाणिज्यिक मुकदमेबाज़ी में सामान्य अभ्यास के अतिरिक्त, नीचे दिए गए क्षेत्र प्रौद्योगिकी विधि पर विशेष फोकस दर्शाते हैं। ये केवल तथ्यात्मक, सूचनात्मक उद्देश्यों हेतु प्रस्तुत हैं, जैसा कि बार काउंसिल ऑफ़ इंडिया के नियमों के अंतर्गत अनुमत है, तथा ये किसी सहभागिता की पेशकश, गारंटी या आग्रह नहीं हैं।",
+      "g1.h":"फौजदारी विधि","g1.p":"फौजदारी न्यायालयों के समक्ष मामले, जिनमें विचारण, जमानत, तथा फौजदारी पुनरीक्षण या अपील शामिल हैं।",
+      "g2.h":"दीवानी मुकदमेबाज़ी","g2.p":"दीवानी न्यायालयों एवं उच्च न्यायालय के समक्ष मूल एवं अपीलीय दीवानी कार्यवाहियाँ।",
+      "g3.h":"रिट क्षेत्राधिकार","g3.p":"भारत के संविधान के अनुच्छेद 226 एवं 227 के अंतर्गत उच्च न्यायालय के समक्ष याचिकाएँ।",
+      "g4.h":"वाणिज्यिक मुकदमेबाज़ी","g4.p":"वाणिज्यिक अनुबंधों, साझेदारियों एवं व्यावसायिक लेन-देन से उत्पन्न विवाद।",
+      "p1.h":"सूचना प्रौद्योगिकी विधि","p1.p":"सूचना प्रौद्योगिकी अधिनियम एवं डिजिटल प्रणालियों तथा इलेक्ट्रॉनिक लेन-देन के संबद्ध विनियमन के अंतर्गत उत्पन्न मामले।",
+      "p2.h":"डेटा संरक्षण एवं गोपनीयता","p2.p":"व्यक्तिगत डेटा प्रबंधन, गोपनीयता दायित्वों, तथा लागू भारतीय डेटा संरक्षण विधि के अंतर्गत अनुपालन से संबंधित प्रश्न।",
+      "p3.h":"सॉफ्टवेयर एवं प्रौद्योगिकी अनुबंध","p3.p":"सॉफ्टवेयर लाइसेंसिंग अनुबंधों, सेवा-स्तर अनुबंधों, तथा एंटरप्राइज़ प्रौद्योगिकी अनुबंधों की समीक्षा एवं प्रारूपण।",
+      "p4.h":"सॉफ्टवेयर में बौद्धिक संपदा","p4.p":"स्रोत कोड में कॉपीराइट, व्यापार रहस्य, तथा सॉफ्टवेयर विकास में उत्पन्न बौद्धिक संपदा संबंधी विचार।",
+      "p5.h":"साइबर विधि एवं इलेक्ट्रॉनिक साक्ष्य","p5.p":"इलेक्ट्रॉनिक अभिलेखों, डिजिटल साक्ष्य, तथा साइबर विधि क़ानूनों के अंतर्गत अपराधों से जुड़े मामले।",
+      "p6.h":"प्रौद्योगिकी विवाद समाधान","p6.p":"सॉफ्टवेयर डिलीवरी, आईटी सेवाओं, तथा एंटरप्राइज़ प्रौद्योगिकी सहभागिताओं से उत्पन्न विवाद।",
+      "writings.eyebrow":"/* लेख */","writings.h2":"कानून एवं प्रौद्योगिकी पर टिप्पणियाँ।",
+      "writings.p":"समय-समय पर प्रकाशित स्वतंत्र टिप्पणियाँ, सामान्य पठन हेतु यहाँ साझा की गई हैं। ये लेख सार्वजनिक रूप से रिपोर्ट किए गए मामलों पर व्यक्तिगत विश्लेषण एवं शैक्षणिक चर्चा को दर्शाते हैं; ये किसी विशिष्ट मामले पर विधिक राय नहीं हैं तथा इन पर सलाह के रूप में भरोसा नहीं किया जाना चाहिए। ये लेख मीडियम पर अंग्रेज़ी में उपलब्ध हैं।",
+      "writing.read_more":"मीडियम पर पढ़ें ↗",
+      "w0.meta":"जुलाई 2026<br>8 मिनट पठन","w0.h":"The Right to be Forgotten and the Right to Erasure: A Narrative of Indian Jurisprudence","w0.p":"यह लेख बताता है कि भारतीय न्यायालयों ने अनुच्छेद 21 की गोपनीयता न्यायशास्त्र से एक अलिखित \"भुला दिए जाने के अधिकार\" को किस प्रकार गढ़ा है, तथा डीपीडीपी अधिनियम, 2023 के अंतर्गत संकीर्ण सांविधिक विलोपन अधिकार के साथ इसकी सीमा को, जबकि सर्वोच्च न्यायालय इस विषय पर निर्णय देने की तैयारी में है।",
+      "w1.meta":"अगस्त 2022<br>5 मिनट पठन","w1.h":"EPFO Data Leak and the Absence of Data Protection Legislation","w1.p":"कर्मचारी भविष्य निधि संगठन के डेटा के रिपोर्ट किए गए उजागर होने पर विचार करता है, तथा यह जांचता है कि यह भारत के सांविधिक डेटा संरक्षण ढांचे में कमियों तथा खाताधारकों के लिए परिणामी जोखिम के बारे में क्या दर्शाता है।",
+      "w2.meta":"अगस्त 2021<br>5 मिनट पठन","w2.h":"Adoption of ML and AI in Fintech — Trust and Confidence","w2.p":"यह जांचता है कि मशीन लर्निंग एवं एआई प्रणालियों ने बैंकिंग में ग्राहक विश्वास को किस प्रकार नया रूप दिया है, तथा एल्गोरिथमिक पूर्वाग्रह एवं जवाबदेही से जुड़ी चिंताओं पर विचार करता है।",
+      "w3.meta":"अगस्त 2021<br>6 मिनट पठन","w3.h":"Data Privacy Theories — Sufficient to Cover Modern Day Challenges?","w3.p":"सर्वोच्च न्यायालय द्वारा गोपनीयता को मौलिक अधिकार के रूप में मान्यता दिए जाने के आलोक में, वर्तमान डेटा प्रथाओं के विरुद्ध गोपनीयता के शास्त्रीय एवं प्रासंगिक-अखंडता सिद्धांतों की समीक्षा करता है।",
+      "w4.meta":"मई 2021<br>4 मिनट पठन","w4.h":"Digital India: Security, Transparency, COVID-19 & Fiasco?","w4.p":"महामारी के दौरान उजागर हुई भारत की डिजिटल शासन अवसंरचना की कमियों पर विचार करता है, उस अवधि की सार्वजनिक रूप से रिपोर्ट की गई डेटा-प्रबंधन घटनाओं के आधार पर।",
+      "contact.eyebrow":"/* संपर्क */","contact.h2":"कार्यालय जानकारी।",
+      "contact.block1.eyebrow":"कार्यालय से संपर्क करें","contact.block1.h3":"लॉ ऑफिसेज़ ऑफ अरुण कुमार",
+      "contact.address.k":"पता","contact.address.v":"एम.आई.जी 547, फेज़-1, अर्बन एस्टेट, पटियाला, पंजाब — 147002",
+      "contact.email.k":"ईमेल","contact.whatsapp.k":"व्हाट्सऐप","contact.social.k":"सोशल","contact.social.v":"पेज शीघ्र आ रहे हैं",
+      "contact.enrolment.k":"नामांकन","contact.enrolment.v":"बार काउंसिल ऑफ़ पंजाब एवं हरियाणा",
+      "contact.practising.k":"अभ्यासरत न्यायालय","contact.practising.v":"पंजाब एवं हरियाणा उच्च न्यायालय, चंडीगढ़ एवं अन्य न्यायालय/न्यायाधिकरण",
+      "contact.notice":"बार काउंसिल ऑफ़ इंडिया के नियमों के अनुरूप, यह अनुभाग केवल इसलिए दिया गया है ताकि जो व्यक्ति स्वयं की इच्छा से फ़र्म से संपर्क करना चाहते हैं, वे ऐसा कर सकें। यह विधिक सेवाएँ प्राप्त करने का आमंत्रण नहीं है।",
+      "contact.block2.eyebrow":"कार्यालय समय","contact.block2.h3":"उपलब्धता",
+      "hours1.k":"सोम – शनि","hours1.v":"शाम 6:00 – 8:00 बजे",
+      "hours2.k":"रविवार","hours2.v":"प्रातः 10:00 – दोपहर 2:00 एवं शाम 6:00 – 8:00 बजे",
+      "foot.disclaimer.h4":"अस्वीकरण",
+      "foot.disclaimer.p":"यह वेबसाइट केवल सूचनात्मक उद्देश्यों के लिए उपलब्ध कराई गई है तथा यह अधिवक्ता अधिनियम, 1961 के अंतर्गत बार काउंसिल ऑफ़ इंडिया द्वारा बनाए गए नियमों के तहत विधिक सलाह, विज्ञापन अथवा कार्य हेतु आग्रह नहीं है और न ही इसे ऐसा समझा जाना चाहिए। इस वेबसाइट तक पहुँच एवं इसका उपयोग पूर्णतः उपयोगकर्ता की अपनी इच्छा पर है तथा इससे कोई अधिवक्ता-मुवक्किल संबंध स्थापित नहीं होता। यहाँ निहित जानकारी विशिष्ट तथ्यों एवं परिस्थितियों के संबंध में किसी अधिवक्ता से प्राप्त विधिक सलाह का विकल्प नहीं है। इस वेबसाइट पर उपलब्ध सामग्री या जानकारी पर भरोसा करने वाले किसी उपयोगकर्ता की किसी कार्रवाई के परिणाम हेतु फ़र्म उत्तरदायी नहीं होगी।",
+      "foot.firm.h4":"फ़र्म",
+      "foot.firm.p":"लॉ ऑफिसेज़ ऑफ अरुण कुमार<br>अधिवक्ता, बार काउंसिल ऑफ़ पंजाब एवं हरियाणा में नामांकित।<br><br>यह एक स्वतंत्र विधिक अभ्यास है। इस वेबसाइट के किसी भी भाग को फ़र्म की सेवाओं की किसी अन्य अधिवक्ता या फ़र्म से तुलना के रूप में नहीं देखा जाना चाहिए।",
+      "foot.copyright":"लॉ ऑफिसेज़ ऑफ अरुण कुमार"
+    },
+    pa: {
+      "skip.link":"ਮੁੱਖ ਸਮੱਗਰੀ ਤੇ ਜਾਓ",
+      "utility.lang_label":"ਭਾਸ਼ਾ","utility.theme_label":"ਰੰਗ ਥੀਮ","utility.textsize_label":"ਟੈਕਸਟ ਆਕਾਰ",
+      "utility.theme_light":"ਹਲਕਾ","utility.theme_dark":"ਗੂੜ੍ਹਾ",
+      "gate.eyebrow":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਨਿਯਮ — ਬੇਦਾਅਵਾ",
+      "gate.p1":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੇ ਨਿਯਮ ਵਕੀਲਾਂ ਨੂੰ ਕੰਮ ਲਈ ਬੇਨਤੀ ਕਰਨ ਜਾਂ ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੰਦੇ। ਹੇਠਾਂ \"ਮੈਂ ਸਹਿਮਤ ਹਾਂ\" ਤੇ ਕਲਿੱਕ ਕਰਕੇ, ਤੁਸੀਂ ਮੰਨਦੇ ਹੋ ਕਿ:",
+      "gate.list":"— ਤੁਸੀਂ ਆਪਣੀ ਮਰਜ਼ੀ ਨਾਲ ਫਰਮ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲੱਭ ਰਹੇ ਹੋ, ਅਤੇ ਫਰਮ ਜਾਂ ਇਸਦੇ ਮੈਂਬਰਾਂ ਵੱਲੋਂ ਕੋਈ ਵੀ ਬੇਨਤੀ, ਸੱਦਾ ਜਾਂ ਉਕਸਾਹਟ ਨਹੀਂ ਦਿੱਤੀ ਗਈ।<br><br>— ਇਹ ਵੈੱਬਸਾਈਟ ਸਿਰਫ਼ ਜਾਣਕਾਰੀ ਦੇ ਮਕਸਦ ਲਈ ਹੈ ਅਤੇ ਇਹ ਕਾਨੂੰਨੀ ਸਲਾਹ ਨਹੀਂ ਹੈ। ਇਸ ਸਾਈਟ ਤੱਕ ਪਹੁੰਚ ਨਾਲ ਕੋਈ ਵਕੀਲ-ਮੁਵੱਕਿਲ ਸਬੰਧ ਨਹੀਂ ਬਣਦਾ।<br><br>— ਇਸ ਵੈੱਬਸਾਈਟ ਤੇ ਦਿੱਤੀ ਜਾਣਕਾਰੀ ਨੂੰ ਐਡਵੋਕੇਟਸ ਐਕਟ, 1961 ਜਾਂ ਇਸ ਅਧੀਨ ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੁਆਰਾ ਬਣਾਏ ਨਿਯਮਾਂ ਦੇ ਮਕਸਦ ਲਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ ਸਮਝਿਆ ਜਾਣਾ ਚਾਹੀਦਾ।",
+      "gate.btn":"ਮੈਂ ਸਮਝਦਾ/ਸਮਝਦੀ ਹਾਂ ਅਤੇ ਸਹਿਮਤ ਹਾਂ — ਸਾਈਟ ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ",
+      "brand.tagline":"ਵਕੀਲ · ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਹਾਈ ਕੋਰਟ",
+      "nav.about":"ਪਿਛੋਕੜ","nav.credentials":"ਯੋਗਤਾਵਾਂ","nav.practice":"ਅਭਿਆਸ ਦੇ ਖੇਤਰ","nav.writings":"ਲੇਖ","nav.contact":"ਸੰਪਰਕ",
+      "hero.eyebrow":"ਲਾਅ ਆਫਿਸਿਜ਼ ਆਫ ਅਰੁਣ ਕੁਮਾਰ",
+      "hero.h1":"ਤਕਨਾਲੋਜੀ ਅਤੇ ਕਾਨੂੰਨ ਦੇ ਮੇਲ ਬਿੰਦੂ ਤੇ ਇੱਕ ਸੁਤੰਤਰ ਕਾਨੂੰਨੀ ਅਭਿਆਸ।",
+      "hero.sub":"ਵਕੀਲ, ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਵਿੱਚ ਦਰਜ। ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਹਾਈ ਕੋਰਟ, ਚੰਡੀਗੜ੍ਹ, ਅਤੇ ਹੋਰ ਅਦਾਲਤਾਂ ਅਤੇ ਟ੍ਰਿਬਿਊਨਲਾਂ ਸਾਹਮਣੇ ਅਭਿਆਸਸ਼ੀਲ। ਕਾਨੂੰਨ ਦੇ ਕਿੱਤੇ ਵਿੱਚ ਆਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਇੰਜੀਨੀਅਰਿੰਗ ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਸਾਫਟਵੇਅਰ ਦਾ ਪਿਛੋਕੜ।",
+      "strip1.b":"ਦਰਜ ਵਕੀਲ","strip1.v":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ",
+      "strip2.b":"ਅਭਿਆਸਸ਼ੀਲ ਅਦਾਲਤਾਂ","strip2.v":"ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਹਾਈ ਕੋਰਟ, ਚੰਡੀਗੜ੍ਹ ਅਤੇ ਹੋਰ ਅਦਾਲਤਾਂ/ਟ੍ਰਿਬਿਊਨਲ",
+      "strip3.b":"ਇੰਜੀਨੀਅਰਿੰਗ ਪਿਛੋਕੜ","strip3.v":"ਬੀ.ਟੈਕ, ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ",
+      "strip4.b":"ਉਦਯੋਗ ਤਜਰਬਾ","strip4.v":"9 ਸਾਲ, ਆਈਟੀ — ਭਾਰਤ ਅਤੇ ਅਮਰੀਕਾ; ਟੀਮਕਨੈਕਟ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ",
+      "strip5.b":"ਮੁਕੱਦਮੇਬਾਜ਼ੀ ਫੋਕਸ","strip5.v":"ਫੌਜਦਾਰੀ, ਦੀਵਾਨੀ, ਰਿੱਟ, ਵਪਾਰਕ ਅਤੇ ਤਕਨਾਲੋਜੀ ਕਾਨੂੰਨ",
+      "about.eyebrow":"/* ਪਿਛੋਕੜ */","about.h2":"ਐਂਟਰਪ੍ਰਾਈਜ਼ ਸਾਫਟਵੇਅਰ ਤੋਂ ਬਾਰ ਤੱਕ।",
+      "about.p1":"ਅਰੁਣ ਕੁਮਾਰ ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਵਿੱਚ ਦਰਜ ਇੱਕ ਵਕੀਲ ਹਨ। ਕਾਨੂੰਨ ਦੇ ਕਿੱਤੇ ਤੋਂ ਪਹਿਲਾਂ, ਉਹਨਾਂ ਨੇ ਇੱਕ ਇੰਜੀਨੀਅਰ ਵਜੋਂ ਸਿਖਲਾਈ ਲਈ, ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ ਵਿੱਚ ਬੈਚਲਰ ਆਫ਼ ਟੈਕਨਾਲੋਜੀ ਦੀ ਡਿਗਰੀ ਰੱਖਦੇ ਹੋਏ।",
+      "about.p2":"ਉਹਨਾਂ ਨੇ ਭਾਰਤ ਅਤੇ ਅਮਰੀਕਾ ਵਿੱਚ ਸੂਚਨਾ ਤਕਨਾਲੋਜੀ ਉਦਯੋਗ ਵਿੱਚ ਨੌ ਸਾਲ ਬਿਤਾਏ, ਜਿਸ ਵਿੱਚ ਟੈੱਕ ਮਹਿੰਦਰਾ ਅਮਰੀਕਾਜ਼ ਨਾਲ ਇੱਕ ਭੂਮਿਕਾ ਸ਼ਾਮਲ ਹੈ, ਮੁੱਖ ਤੌਰ ਤੇ ਇੱਕ ਜਾਵਾ ਡਿਵੈਲਪਰ ਵਜੋਂ ਅਤੇ ਸਰਵਿਸ ਵਰਚੁਅਲਾਈਜ਼ੇਸ਼ਨ ਵਿੱਚ ਕੰਮ ਕਰਦੇ ਹੋਏ — ਇਹ ਇੱਕ ਅਜਿਹਾ ਖੇਤਰ ਹੈ ਜੋ ਟੈਸਟਿੰਗ ਅਤੇ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਦੇ ਮਕਸਦ ਲਈ ਗੁੰਝਲਦਾਰ, ਆਪਸ ਵਿੱਚ ਨਿਰਭਰ ਸਾਫਟਵੇਅਰ ਪ੍ਰਣਾਲੀਆਂ ਦੇ ਵਿਵਹਾਰ ਦੀ ਨਕਲ ਕਰਨ ਨਾਲ ਸਬੰਧਤ ਹੈ।",
+      "about.p3":"ਇੱਕ ਜਾਵਾ ਡਿਵੈਲਪਰ ਵਜੋਂ, ਉਹਨਾਂ ਨੇ ਟੀਮਕਨੈਕਟ ਦੇ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ ਤੇ ਕੰਮ ਕੀਤਾ, ਜੋ ਇੱਕ ਵਿਆਪਕ ਤੌਰ ਤੇ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਲੀਗਲ ਮੈਟਰ ਮੈਨੇਜਮੈਂਟ ਸਿਸਟਮ ਹੈ, ਫੌਰਚੂਨ 500 ਕੰਪਨੀਆਂ ਸਮੇਤ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਗਾਹਕਾਂ ਨਾਲ ਕੰਮ ਕਰਦੇ ਹੋਏ।",
+      "about.p4":"ਬਾਅਦ ਵਿੱਚ ਬੈਚਲਰ ਆਫ਼ ਲਾਅਜ਼ (ਐਲ.ਐਲ.ਬੀ.) ਪੂਰੀ ਕਰਨ ਅਤੇ ਵਕੀਲ ਵਜੋਂ ਦਰਜ ਹੋਣ ਦੇ ਬਾਅਦ, ਇਹ ਪਿਛੋਕੜ ਇੱਕ ਅਜਿਹੇ ਅਭਿਆਸ ਨੂੰ ਦਿਸ਼ਾ ਦਿੰਦਾ ਹੈ ਜੋ ਕਾਨੂੰਨੀ ਸਵਾਲਾਂ ਅਤੇ ਤਕਨੀਕੀ ਪ੍ਰਣਾਲੀਆਂ ਦੇ ਮੇਲ ਵਾਲੇ ਮਾਮਲਿਆਂ ਵੱਲ ਮੁਖੀ ਹੈ — ਜਿਸ ਵਿੱਚ ਸਾਫਟਵੇਅਰ, ਡਾਟਾ ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਤਕਨਾਲੋਜੀ ਸੰਦਰਭ ਸ਼ਾਮਲ ਹਨ — ਨਾਲ ਹੀ ਫੌਜਦਾਰੀ, ਦੀਵਾਨੀ, ਰਿੱਟ ਅਤੇ ਵਪਾਰਕ ਮਾਮਲਿਆਂ ਵਿੱਚ ਆਮ ਮੁਕੱਦਮੇਬਾਜ਼ੀ ਅਭਿਆਸ ਵੀ।",
+      "about.p5":"ਇਹ ਵੈੱਬਸਾਈਟ ਸਿਰਫ਼ ਫਰਮ ਬਾਰੇ ਤੱਥਾਤਮਕ ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਬਣਾਈ ਰੱਖੀ ਗਈ ਹੈ, ਐਡਵੋਕੇਟਸ ਐਕਟ, 1961 ਅਧੀਨ ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੁਆਰਾ ਬਣਾਏ ਨਿਯਮਾਂ ਦੇ ਅਨੁਸਾਰ। ਇਸਨੂੰ ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਜਾਂ ਕਾਨੂੰਨੀ ਕੰਮ ਲਈ ਬੇਨਤੀ ਵਜੋਂ ਨਾ ਤਾਂ ਮਕਸਦ ਕੀਤਾ ਗਿਆ ਹੈ, ਨਾ ਹੀ ਸਮਝਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+      "row1.k":"ਡਿਗਰੀ","row1.v":"ਬੀ.ਟੈਕ — ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ",
+      "row2.k":"ਪਿਛਲਾ ਖੇਤਰ","row2.v":"ਜਾਵਾ ਡਿਵੈਲਪਮੈਂਟ ਅਤੇ ਸਰਵਿਸ ਵਰਚੁਅਲਾਈਜ਼ੇਸ਼ਨ",
+      "row3.k":"ਪਿਛਲਾ ਮਾਲਕ","row3.v":"ਟੈੱਕ ਮਹਿੰਦਰਾ ਅਮਰੀਕਾਜ਼",
+      "row4.k":"ਲੀਗਲ ਟੈਕਨਾਲੋਜੀ","row4.v":"ਟੀਮਕਨੈਕਟ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ (ਫੌਰਚੂਨ 500 ਗਾਹਕਾਂ ਸਮੇਤ)",
+      "row5.k":"ਪਿਛਲਾ ਭੂਗੋਲਿਕ ਖੇਤਰ","row5.v":"ਭਾਰਤ ਅਤੇ ਅਮਰੀਕਾ",
+      "row6.k":"ਉਦਯੋਗ ਕਾਰਜਕਾਲ","row6.v":"9 ਸਾਲ",
+      "row7.k":"ਕਾਨੂੰਨ ਡਿਗਰੀ","row7.v":"ਐਲ.ਐਲ.ਬੀ. — ਬੈਚਲਰ ਆਫ਼ ਲਾਅਜ਼",
+      "row8.k":"ਦਰਜ ਕਰਨ ਵਾਲੀ ਸੰਸਥਾ","row8.v":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ",
+      "cred.eyebrow":"/* ਯੋਗਤਾਵਾਂ */","cred.h2":"ਯੋਗਤਾਵਾਂ।",
+      "c1.tag":"ਸਿੱਖਿਆ","c1.h":"ਬੀ.ਟੈਕ, ਕੰਪਿਊਟਰ ਸਾਇੰਸ ਅਤੇ ਇੰਜੀਨੀਅਰਿੰਗ","c1.p":"ਸਾਫਟਵੇਅਰ ਪ੍ਰਣਾਲੀਆਂ, ਇੰਜੀਨੀਅਰਿੰਗ ਅਤੇ ਕੰਪਿਊਟਿੰਗ ਵਿੱਚ ਬੁਨਿਆਦੀ ਸਿਖਲਾਈ।",
+      "c2.tag":"ਉਦਯੋਗ","c2.h":"ਜਾਵਾ ਡਿਵੈਲਪਰ ਅਤੇ ਸਰਵਿਸ ਵਰਚੁਅਲਾਈਜ਼ੇਸ਼ਨ ਮਾਹਿਰ","c2.p":"ਭਾਰਤ ਅਤੇ ਅਮਰੀਕਾ ਵਿੱਚ ਸੂਚਨਾ ਤਕਨਾਲੋਜੀ ਖੇਤਰ ਦੀਆਂ ਭੂਮਿਕਾਵਾਂ ਵਿੱਚ ਨੌ ਸਾਲ, ਟੈੱਕ ਮਹਿੰਦਰਾ ਅਮਰੀਕਾਜ਼ ਸਮੇਤ।",
+      "c3.tag":"ਲੀਗਲ ਟੈਕਨਾਲੋਜੀ","c3.h":"ਟੀਮਕਨੈਕਟ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ","c3.p":"ਇੱਕ ਜਾਵਾ ਡਿਵੈਲਪਰ ਵਜੋਂ, ਟੀਮਕਨੈਕਟ — ਇੱਕ ਮੋਹਰੀ ਲੀਗਲ ਮੈਟਰ ਮੈਨੇਜਮੈਂਟ ਸਿਸਟਮ — ਦੇ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ ਤੇ ਫੌਰਚੂਨ 500 ਕੰਪਨੀਆਂ ਸਮੇਤ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਗਾਹਕਾਂ ਲਈ ਕੰਮ ਕੀਤਾ।",
+      "c4.tag":"ਸਿੱਖਿਆ","c4.h":"ਐਲ.ਐਲ.ਬੀ.","c4.p":"ਬੈਚਲਰ ਆਫ਼ ਲਾਅਜ਼।",
+      "c5.tag":"ਦਰਜ","c5.h":"ਦਰਜ ਵਕੀਲ","c5.p":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ।",
+      "c6.tag":"ਅਭਿਆਸ","c6.h":"ਅਦਾਲਤਾਂ ਅਤੇ ਟ੍ਰਿਬਿਊਨਲ","c6.p":"ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਹਾਈ ਕੋਰਟ, ਚੰਡੀਗੜ੍ਹ, ਅਤੇ ਹੋਰ ਅਦਾਲਤਾਂ ਅਤੇ ਟ੍ਰਿਬਿਊਨਲਾਂ ਵਿੱਚ, ਫੌਜਦਾਰੀ, ਦੀਵਾਨੀ, ਰਿੱਟ ਅਤੇ ਵਪਾਰਕ ਮਾਮਲਿਆਂ ਵਿੱਚ।",
+      "cred.visual.caption":"ਇੰਜੀਨੀਅਰਿੰਗ → ਉਦਯੋਗ → ਕਾਨੂੰਨ",
+      "ceremony.cap":"ਵਕੀਲ ਵਜੋਂ ਦਰਜ ਹੋਣਾ — ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ",
+      "practice.eyebrow":"/* ਅਭਿਆਸ ਦੇ ਖੇਤਰ */",
+      "practice.h2":"ਆਮ ਮੁਕੱਦਮੇਬਾਜ਼ੀ, ਅਤੇ ਕਾਨੂੰਨ ਅਤੇ ਤਕਨਾਲੋਜੀ ਦੇ ਮੇਲ ਵਾਲੇ ਮਾਮਲੇ।",
+      "practice.p":"ਫੌਜਦਾਰੀ, ਦੀਵਾਨੀ (ਮੂਲ ਅਤੇ ਅਪੀਲੀ) ਅਤੇ ਰਿੱਟ ਅਧਿਕਾਰ ਖੇਤਰ ਦੇ ਮਾਮਲਿਆਂ, ਅਤੇ ਵਪਾਰਕ ਮੁਕੱਦਮੇਬਾਜ਼ੀ ਵਿੱਚ ਆਮ ਅਭਿਆਸ ਤੋਂ ਇਲਾਵਾ, ਹੇਠਾਂ ਦਿੱਤੇ ਖੇਤਰ ਤਕਨਾਲੋਜੀ ਕਾਨੂੰਨ ਤੇ ਖਾਸ ਧਿਆਨ ਦਰਸਾਉਂਦੇ ਹਨ। ਇਹ ਸਿਰਫ਼ ਤੱਥਾਤਮਕ, ਜਾਣਕਾਰੀ ਭਰਪੂਰ ਮਕਸਦਾਂ ਲਈ ਦਿੱਤੇ ਗਏ ਹਨ, ਜਿਵੇਂ ਕਿ ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੇ ਨਿਯਮਾਂ ਅਧੀਨ ਮਨਜ਼ੂਰ ਹੈ, ਅਤੇ ਇਹ ਕਿਸੇ ਸ਼ਮੂਲੀਅਤ ਦੀ ਪੇਸ਼ਕਸ਼, ਗਰੰਟੀ ਜਾਂ ਬੇਨਤੀ ਨਹੀਂ ਹਨ।",
+      "g1.h":"ਫੌਜਦਾਰੀ ਕਾਨੂੰਨ","g1.p":"ਫੌਜਦਾਰੀ ਅਦਾਲਤਾਂ ਸਾਹਮਣੇ ਮਾਮਲੇ, ਜਿਸ ਵਿੱਚ ਟਰਾਇਲ, ਜ਼ਮਾਨਤ, ਅਤੇ ਫੌਜਦਾਰੀ ਰੀਵਿਜ਼ਨ ਜਾਂ ਅਪੀਲ ਸ਼ਾਮਲ ਹੈ।",
+      "g2.h":"ਦੀਵਾਨੀ ਮੁਕੱਦਮੇਬਾਜ਼ੀ","g2.p":"ਦੀਵਾਨੀ ਅਦਾਲਤਾਂ ਅਤੇ ਹਾਈ ਕੋਰਟ ਸਾਹਮਣੇ ਮੂਲ ਅਤੇ ਅਪੀਲੀ ਦੀਵਾਨੀ ਕਾਰਵਾਈਆਂ।",
+      "g3.h":"ਰਿੱਟ ਅਧਿਕਾਰ ਖੇਤਰ","g3.p":"ਭਾਰਤ ਦੇ ਸੰਵਿਧਾਨ ਦੀ ਧਾਰਾ 226 ਅਤੇ 227 ਅਧੀਨ ਹਾਈ ਕੋਰਟ ਸਾਹਮਣੇ ਪਟੀਸ਼ਨਾਂ।",
+      "g4.h":"ਵਪਾਰਕ ਮੁਕੱਦਮੇਬਾਜ਼ੀ","g4.p":"ਵਪਾਰਕ ਸਮਝੌਤਿਆਂ, ਭਾਈਵਾਲੀਆਂ ਅਤੇ ਵਪਾਰਕ ਲੈਣ-ਦੇਣ ਤੋਂ ਪੈਦਾ ਹੋਏ ਝਗੜੇ।",
+      "p1.h":"ਸੂਚਨਾ ਤਕਨਾਲੋਜੀ ਕਾਨੂੰਨ","p1.p":"ਸੂਚਨਾ ਤਕਨਾਲੋਜੀ ਐਕਟ ਅਤੇ ਡਿਜੀਟਲ ਪ੍ਰਣਾਲੀਆਂ ਅਤੇ ਇਲੈਕਟ੍ਰਾਨਿਕ ਲੈਣ-ਦੇਣ ਦੇ ਸਬੰਧਤ ਨਿਯਮਨ ਅਧੀਨ ਪੈਦਾ ਹੋਏ ਮਾਮਲੇ।",
+      "p2.h":"ਡਾਟਾ ਸੁਰੱਖਿਆ ਅਤੇ ਗੁਪਤਤਾ","p2.p":"ਨਿੱਜੀ ਡਾਟਾ ਪ੍ਰਬੰਧਨ, ਗੁਪਤਤਾ ਜ਼ਿੰਮੇਵਾਰੀਆਂ, ਅਤੇ ਲਾਗੂ ਭਾਰਤੀ ਡਾਟਾ ਸੁਰੱਖਿਆ ਕਾਨੂੰਨ ਅਧੀਨ ਪਾਲਣਾ ਨਾਲ ਸਬੰਧਤ ਸਵਾਲ।",
+      "p3.h":"ਸਾਫਟਵੇਅਰ ਅਤੇ ਤਕਨਾਲੋਜੀ ਸਮਝੌਤੇ","p3.p":"ਸਾਫਟਵੇਅਰ ਲਾਇਸੈਂਸਿੰਗ ਸਮਝੌਤਿਆਂ, ਸੇਵਾ-ਪੱਧਰ ਸਮਝੌਤਿਆਂ, ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਤਕਨਾਲੋਜੀ ਸਮਝੌਤਿਆਂ ਦੀ ਸਮੀਖਿਆ ਅਤੇ ਖਰੜਾ ਤਿਆਰ ਕਰਨਾ।",
+      "p4.h":"ਸਾਫਟਵੇਅਰ ਵਿੱਚ ਬੌਧਿਕ ਸੰਪਤੀ","p4.p":"ਸੋਰਸ ਕੋਡ ਵਿੱਚ ਕਾਪੀਰਾਈਟ, ਵਪਾਰਕ ਭੇਦ, ਅਤੇ ਸਾਫਟਵੇਅਰ ਵਿਕਾਸ ਵਿੱਚ ਪੈਦਾ ਹੋਈ ਬੌਧਿਕ ਸੰਪਤੀ ਸਬੰਧੀ ਮਾਮਲੇ।",
+      "p5.h":"ਸਾਈਬਰ ਕਾਨੂੰਨ ਅਤੇ ਇਲੈਕਟ੍ਰਾਨਿਕ ਸਬੂਤ","p5.p":"ਇਲੈਕਟ੍ਰਾਨਿਕ ਰਿਕਾਰਡਾਂ, ਡਿਜੀਟਲ ਸਬੂਤ, ਅਤੇ ਸਾਈਬਰ ਕਾਨੂੰਨ ਕਾਨੂੰਨਾਂ ਅਧੀਨ ਅਪਰਾਧਾਂ ਨਾਲ ਸਬੰਧਤ ਮਾਮਲੇ।",
+      "p6.h":"ਤਕਨਾਲੋਜੀ ਝਗੜਾ ਹੱਲ","p6.p":"ਸਾਫਟਵੇਅਰ ਡਿਲੀਵਰੀ, ਆਈਟੀ ਸੇਵਾਵਾਂ, ਅਤੇ ਐਂਟਰਪ੍ਰਾਈਜ਼ ਤਕਨਾਲੋਜੀ ਸ਼ਮੂਲੀਅਤਾਂ ਤੋਂ ਪੈਦਾ ਹੋਏ ਝਗੜੇ।",
+      "writings.eyebrow":"/* ਲੇਖ */","writings.h2":"ਕਾਨੂੰਨ ਅਤੇ ਤਕਨਾਲੋਜੀ ਤੇ ਟਿੱਪਣੀਆਂ।",
+      "writings.p":"ਸਮੇਂ-ਸਮੇਂ ਤੇ ਪ੍ਰਕਾਸ਼ਿਤ ਸੁਤੰਤਰ ਟਿੱਪਣੀਆਂ, ਆਮ ਪੜ੍ਹਨ ਲਈ ਇੱਥੇ ਸਾਂਝੀਆਂ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ। ਇਹ ਲੇਖ ਜਨਤਕ ਤੌਰ ਤੇ ਰਿਪੋਰਟ ਕੀਤੇ ਮਾਮਲਿਆਂ ਤੇ ਨਿੱਜੀ ਵਿਸ਼ਲੇਸ਼ਣ ਅਤੇ ਅਕਾਦਮਿਕ ਚਰਚਾ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ; ਇਹ ਕਿਸੇ ਖਾਸ ਮਾਮਲੇ ਤੇ ਕਾਨੂੰਨੀ ਰਾਏ ਨਹੀਂ ਹਨ ਅਤੇ ਇਹਨਾਂ ਤੇ ਸਲਾਹ ਵਜੋਂ ਭਰੋਸਾ ਨਹੀਂ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ। ਇਹ ਲੇਖ ਮੀਡੀਅਮ ਤੇ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਉਪਲਬਧ ਹਨ।",
+      "writing.read_more":"ਮੀਡੀਅਮ ਤੇ ਪੜ੍ਹੋ ↗",
+      "w0.meta":"ਜੁਲਾਈ 2026<br>8 ਮਿੰਟ ਪੜ੍ਹਨ","w0.h":"The Right to be Forgotten and the Right to Erasure: A Narrative of Indian Jurisprudence","w0.p":"ਇਹ ਲੇਖ ਦੱਸਦਾ ਹੈ ਕਿ ਭਾਰਤੀ ਅਦਾਲਤਾਂ ਨੇ ਧਾਰਾ 21 ਦੀ ਗੁਪਤਤਾ ਨਿਆਂ ਸ਼ਾਸਤਰ ਤੋਂ ਇੱਕ ਅਣਲਿਖਤ \"ਭੁੱਲ ਜਾਣ ਦੇ ਅਧਿਕਾਰ\" ਨੂੰ ਕਿਵੇਂ ਘੜਿਆ ਹੈ, ਡੀਪੀਡੀਪੀ ਐਕਟ, 2023 ਅਧੀਨ ਤੰਗ ਕਾਨੂੰਨੀ ਮਿਟਾਉਣ ਅਧਿਕਾਰ ਦੇ ਨਾਲ, ਜਦਕਿ ਸੁਪਰੀਮ ਕੋਰਟ ਇਸ ਤੇ ਫੈਸਲਾ ਦੇਣ ਦੀ ਤਿਆਰੀ ਵਿੱਚ ਹੈ।",
+      "w1.meta":"ਅਗਸਤ 2022<br>5 ਮਿੰਟ ਪੜ੍ਹਨ","w1.h":"EPFO Data Leak and the Absence of Data Protection Legislation","w1.p":"ਕਰਮਚਾਰੀ ਭਵਿੱਖ ਨਿਧੀ ਸੰਗਠਨ ਦੇ ਡਾਟੇ ਦੇ ਰਿਪੋਰਟ ਕੀਤੇ ਜਾਣ ਵਾਲੇ ਖੁਲਾਸੇ ਤੇ ਵਿਚਾਰ ਕਰਦਾ ਹੈ, ਅਤੇ ਇਹ ਵੇਖਦਾ ਹੈ ਕਿ ਇਹ ਭਾਰਤ ਦੇ ਕਾਨੂੰਨੀ ਡਾਟਾ ਸੁਰੱਖਿਆ ਢਾਂਚੇ ਵਿੱਚ ਖਾਮੀਆਂ ਅਤੇ ਖਾਤਾਧਾਰਕਾਂ ਲਈ ਨਤੀਜੇ ਵਜੋਂ ਖਤਰੇ ਬਾਰੇ ਕੀ ਦਰਸਾਉਂਦਾ ਹੈ।",
+      "w2.meta":"ਅਗਸਤ 2021<br>5 ਮਿੰਟ ਪੜ੍ਹਨ","w2.h":"Adoption of ML and AI in Fintech — Trust and Confidence","w2.p":"ਇਹ ਵੇਖਦਾ ਹੈ ਕਿ ਮਸ਼ੀਨ ਲਰਨਿੰਗ ਅਤੇ ਏਆਈ ਪ੍ਰਣਾਲੀਆਂ ਨੇ ਬੈਂਕਿੰਗ ਵਿੱਚ ਗਾਹਕ ਭਰੋਸੇ ਨੂੰ ਕਿਵੇਂ ਨਵਾਂ ਰੂਪ ਦਿੱਤਾ ਹੈ, ਅਤੇ ਐਲਗੋਰਿਥਮਿਕ ਪੱਖਪਾਤ ਅਤੇ ਜਵਾਬਦੇਹੀ ਨਾਲ ਜੁੜੀਆਂ ਚਿੰਤਾਵਾਂ ਤੇ ਵਿਚਾਰ ਕਰਦਾ ਹੈ।",
+      "w3.meta":"ਅਗਸਤ 2021<br>6 ਮਿੰਟ ਪੜ੍ਹਨ","w3.h":"Data Privacy Theories — Sufficient to Cover Modern Day Challenges?","w3.p":"ਸੁਪਰੀਮ ਕੋਰਟ ਵੱਲੋਂ ਗੁਪਤਤਾ ਨੂੰ ਬੁਨਿਆਦੀ ਅਧਿਕਾਰ ਵਜੋਂ ਮਾਨਤਾ ਦੇਣ ਦੇ ਮੱਦੇਨਜ਼ਰ, ਅੱਜ ਦੇ ਡਾਟਾ ਅਭਿਆਸਾਂ ਦੇ ਵਿਰੁੱਧ ਗੁਪਤਤਾ ਦੇ ਕਲਾਸੀਕਲ ਅਤੇ ਸੰਦਰਭ-ਇਕਸਾਰਤਾ ਸਿਧਾਂਤਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰਦਾ ਹੈ।",
+      "w4.meta":"ਮਈ 2021<br>4 ਮਿੰਟ ਪੜ੍ਹਨ","w4.h":"Digital India: Security, Transparency, COVID-19 & Fiasco?","w4.p":"ਮਹਾਂਮਾਰੀ ਦੌਰਾਨ ਸਾਹਮਣੇ ਆਈਆਂ ਭਾਰਤ ਦੇ ਡਿਜੀਟਲ ਸ਼ਾਸਨ ਢਾਂਚੇ ਦੀਆਂ ਖਾਮੀਆਂ ਤੇ ਵਿਚਾਰ ਕਰਦਾ ਹੈ, ਉਸ ਸਮੇਂ ਦੀਆਂ ਜਨਤਕ ਤੌਰ ਤੇ ਰਿਪੋਰਟ ਕੀਤੀਆਂ ਡਾਟਾ-ਪ੍ਰਬੰਧਨ ਘਟਨਾਵਾਂ ਦੇ ਆਧਾਰ ਤੇ।",
+      "contact.eyebrow":"/* ਸੰਪਰਕ */","contact.h2":"ਦਫ਼ਤਰ ਜਾਣਕਾਰੀ।",
+      "contact.block1.eyebrow":"ਦਫ਼ਤਰ ਨਾਲ ਸੰਪਰਕ ਕਰੋ","contact.block1.h3":"ਲਾਅ ਆਫਿਸਿਜ਼ ਆਫ ਅਰੁਣ ਕੁਮਾਰ",
+      "contact.address.k":"ਪਤਾ","contact.address.v":"ਐਮ.ਆਈ.ਜੀ 547, ਫੇਜ਼-1, ਅਰਬਨ ਅਸਟੇਟ, ਪਟਿਆਲਾ, ਪੰਜਾਬ — 147002",
+      "contact.email.k":"ਈਮੇਲ","contact.whatsapp.k":"ਵਟਸਐਪ","contact.social.k":"ਸੋਸ਼ਲ","contact.social.v":"ਪੰਨੇ ਜਲਦ ਆ ਰਹੇ ਹਨ",
+      "contact.enrolment.k":"ਦਰਜ","contact.enrolment.v":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ",
+      "contact.practising.k":"ਅਭਿਆਸਸ਼ੀਲ ਅਦਾਲਤਾਂ","contact.practising.v":"ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਹਾਈ ਕੋਰਟ, ਚੰਡੀਗੜ੍ਹ ਅਤੇ ਹੋਰ ਅਦਾਲਤਾਂ/ਟ੍ਰਿਬਿਊਨਲ",
+      "contact.notice":"ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੇ ਨਿਯਮਾਂ ਅਨੁਸਾਰ, ਇਹ ਭਾਗ ਸਿਰਫ਼ ਇਸ ਲਈ ਦਿੱਤਾ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਜੋ ਵਿਅਕਤੀ ਆਪਣੀ ਮਰਜ਼ੀ ਨਾਲ ਫਰਮ ਨਾਲ ਸੰਪਰਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹਨ, ਉਹ ਕਰ ਸਕਣ। ਇਹ ਕਾਨੂੰਨੀ ਸੇਵਾਵਾਂ ਲੈਣ ਦਾ ਸੱਦਾ ਨਹੀਂ ਹੈ।",
+      "contact.block2.eyebrow":"ਦਫ਼ਤਰ ਸਮਾਂ","contact.block2.h3":"ਉਪਲਬਧਤਾ",
+      "hours1.k":"ਸੋਮ – ਸ਼ਨੀ","hours1.v":"ਸ਼ਾਮ 6:00 – 8:00 ਵਜੇ",
+      "hours2.k":"ਐਤਵਾਰ","hours2.v":"ਸਵੇਰੇ 10:00 – ਦੁਪਹਿਰ 2:00 ਅਤੇ ਸ਼ਾਮ 6:00 – 8:00 ਵਜੇ",
+      "foot.disclaimer.h4":"ਬੇਦਾਅਵਾ",
+      "foot.disclaimer.p":"ਇਹ ਵੈੱਬਸਾਈਟ ਸਿਰਫ਼ ਜਾਣਕਾਰੀ ਦੇ ਮਕਸਦ ਲਈ ਉਪਲਬਧ ਕਰਵਾਈ ਗਈ ਹੈ ਅਤੇ ਇਹ ਐਡਵੋਕੇਟਸ ਐਕਟ, 1961 ਅਧੀਨ ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਇੰਡੀਆ ਦੁਆਰਾ ਬਣਾਏ ਨਿਯਮਾਂ ਤਹਿਤ ਕਾਨੂੰਨੀ ਸਲਾਹ ਜਾਂ ਇਸ਼ਤਿਹਾਰਬਾਜ਼ੀ ਜਾਂ ਕੰਮ ਲਈ ਬੇਨਤੀ ਨਹੀਂ ਹੈ ਅਤੇ ਨਾ ਹੀ ਇਸਨੂੰ ਅਜਿਹਾ ਸਮਝਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਇਸ ਵੈੱਬਸਾਈਟ ਤੱਕ ਪਹੁੰਚ ਅਤੇ ਇਸਦੀ ਵਰਤੋਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਵਰਤੋਂਕਾਰ ਦੀ ਆਪਣੀ ਮਰਜ਼ੀ ਤੇ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਕੋਈ ਵਕੀਲ-ਮੁਵੱਕਿਲ ਸਬੰਧ ਨਹੀਂ ਬਣਦਾ। ਇੱਥੇ ਦਿੱਤੀ ਜਾਣਕਾਰੀ ਖਾਸ ਤੱਥਾਂ ਅਤੇ ਹਾਲਾਤਾਂ ਸਬੰਧੀ ਕਿਸੇ ਵਕੀਲ ਤੋਂ ਲਈ ਕਾਨੂੰਨੀ ਸਲਾਹ ਦਾ ਬਦਲ ਨਹੀਂ ਹੈ। ਇਸ ਵੈੱਬਸਾਈਟ ਤੇ ਉਪਲਬਧ ਸਮੱਗਰੀ ਜਾਂ ਜਾਣਕਾਰੀ ਤੇ ਭਰੋਸਾ ਕਰਨ ਵਾਲੇ ਕਿਸੇ ਵਰਤੋਂਕਾਰ ਦੀ ਕਿਸੇ ਕਾਰਵਾਈ ਦੇ ਨਤੀਜੇ ਲਈ ਫਰਮ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੋਵੇਗੀ।",
+      "foot.firm.h4":"ਫਰਮ",
+      "foot.firm.p":"ਲਾਅ ਆਫਿਸਿਜ਼ ਆਫ ਅਰੁਣ ਕੁਮਾਰ<br>ਵਕੀਲ, ਬਾਰ ਕੌਂਸਲ ਆਫ਼ ਪੰਜਾਬ ਅਤੇ ਹਰਿਆਣਾ ਵਿੱਚ ਦਰਜ।<br><br>ਇਹ ਇੱਕ ਸੁਤੰਤਰ ਕਾਨੂੰਨੀ ਅਭਿਆਸ ਹੈ। ਇਸ ਵੈੱਬਸਾਈਟ ਦੇ ਕਿਸੇ ਵੀ ਹਿੱਸੇ ਨੂੰ ਫਰਮ ਦੀਆਂ ਸੇਵਾਵਾਂ ਦੀ ਕਿਸੇ ਹੋਰ ਵਕੀਲ ਜਾਂ ਫਰਮ ਨਾਲ ਤੁਲਨਾ ਵਜੋਂ ਨਹੀਂ ਵੇਖਿਆ ਜਾਣਾ ਚਾਹੀਦਾ।",
+      "foot.copyright":"ਲਾਅ ਆਫਿਸਿਜ਼ ਆਫ ਅਰੁਣ ਕੁਮਾਰ"
+    }
+  };
+
+  function setLanguage(lang){
+    if(!T[lang]) lang = 'en';
+    document.documentElement.setAttribute('lang', lang);
+    var dict = T[lang];
+    i18nEls.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined){ el.textContent = dict[key]; }
+    });
+    i18nHtmlEls.forEach(function(el){
+      var key = el.getAttribute('data-i18n-html');
+      if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+    });
+    langButtons.forEach(function(btn){
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    try{ localStorage.setItem('lok_lang', lang); }catch(e){}
+  }
+
+  langButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){ setLanguage(btn.getAttribute('data-lang')); });
+  });
+
+  var savedLang = 'en';
+  try{ savedLang = localStorage.getItem('lok_lang') || 'en'; }catch(e){}
+  setLanguage(savedLang);
+</script>
+
+</body>
+</html>
