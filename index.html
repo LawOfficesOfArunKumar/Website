@@ -72,7 +72,7 @@
   /* ===== Accessibility ===== */
   .skip-link{
     position:absolute; left:-9999px; top:auto;
-    background:var(--ink); color:var(--paper);
+    background:var(--ink); color:#f7f8f9;
     padding:14px 20px; z-index:1000;
     font-family:'IBM Plex Mono', monospace; font-size:13px;
     text-decoration:none; border:1px solid var(--brass-light);
@@ -95,7 +95,7 @@
 
   /* ===== Utility bar ===== */
   .utility-bar{
-    background:var(--ink); color:var(--stone);
+    background:var(--ink); color:#ccd1d6;
     font-family:'IBM Plex Mono','Noto Sans Devanagari','Noto Sans Gurmukhi', monospace;
     font-size:11.5px; letter-spacing:0.04em;
   }
@@ -107,42 +107,46 @@
   .utility-group span.lbl{color:var(--brass-light); text-transform:uppercase; margin-right:2px;}
   .utility-btn{
     background:transparent; border:1px solid rgba(166,174,185,0.4);
-    color:var(--stone); font-family:inherit; font-size:11px; letter-spacing:0.05em;
+    color:#ccd1d6; font-family:inherit; font-size:11px; letter-spacing:0.05em;
     padding:5px 10px; cursor:pointer; border-radius:2px;
   }
   .utility-btn[aria-pressed="true"]{ background:var(--brass); color:var(--ink); border-color:var(--brass); }
   .utility-icons{display:flex; align-items:center; gap:12px;}
-  .utility-icons a{ display:flex; color:var(--stone); opacity:0.9; text-decoration:none; }
+  .utility-icons a{ display:flex; color:#ccd1d6; opacity:0.9; text-decoration:none; }
   .utility-icons a svg{width:16px; height:16px;}
   .utility-icons a[aria-disabled="true"]{ opacity:0.35; cursor:default; }
-  .utility-icons a:hover:not([aria-disabled="true"]){ color:var(--paper); opacity:1; }
+  .utility-icons a:hover:not([aria-disabled="true"]){ color:#f7f8f9; opacity:1; }
 
   /* ===== Disclaimer Gate ===== */
   #gate{
     position:fixed; inset:0; z-index:999;
     background:var(--ink);
-    color:var(--stone);
-    display:flex; align-items:center; justify-content:center;
+    color:#ccd1d6;
+    display:flex; align-items:flex-start; justify-content:center;
     padding:32px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
   }
   #gate.hidden{display:none;}
   .gate-card{
     max-width:620px;
+    width:100%;
     text-align:center;
     border:1px solid rgba(91,100,114,0.4);
     padding:56px 44px;
     background:var(--ink-2);
+    margin:auto 0;
   }
   .gate-seal{width:64px; height:64px; margin:0 auto 22px; opacity:0.92;}
   .gate-card h2{
-    color:var(--paper);
+    color:#f7f8f9;
     font-size:24px;
     font-weight:500;
     margin-bottom:18px;
   }
   .gate-card p{
     font-size:15px;
-    color:var(--stone);
+    color:#ccd1d6;
     margin:0 0 14px;
   }
   .gate-card p:last-of-type{margin-bottom:30px;}
@@ -206,7 +210,7 @@
   .hero{
     position:relative;
     background:var(--ink);
-    color:var(--paper);
+    color:#f7f8f9;
     overflow:hidden;
   }
   .hero .wrap{
@@ -218,7 +222,7 @@
   .hero .eyebrow{color:var(--brass-light);}
   .hero h1{
     font-size:clamp(34px, 4.4vw, 54px);
-    color:var(--paper);
+    color:#f7f8f9;
     margin-top:16px;
     line-height:1.08;
   }
@@ -250,7 +254,7 @@
     padding:20px 26px;
     border-right:1px solid rgba(91,100,114,0.22);
     font-family:'IBM Plex Mono', monospace;
-    font-size:12px; color:var(--stone); letter-spacing:0.02em;
+    font-size:12px; color:#ccd1d6; letter-spacing:0.02em;
   }
   .strip-item:last-child{border-right:none;}
   .strip-item b{display:block; color:var(--brass-light); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;}
@@ -335,7 +339,7 @@
   }
   .cred-visual svg{width:100%; height:auto; color:var(--brass-light);}
   .cred-visual p{
-    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--stone);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:#ccd1d6;
     letter-spacing:0.04em; text-align:center; margin:18px 0 0; line-height:1.7;
   }
   .ceremony-panel{
@@ -384,7 +388,7 @@
   }
   .contact-social a svg{width:16px; height:16px;}
   .contact-social a[aria-disabled="true"]{opacity:0.4;}
-  .contact-social a:not([aria-disabled="true"]):hover{background:var(--brass); color:var(--paper); border-color:var(--brass);}
+  .contact-social a:not([aria-disabled="true"]):hover{background:var(--brass); color:#f7f8f9; border-color:var(--brass);}
   .placeholder{color:var(--oxblood); font-style:italic;}
   .office-notice{
     margin-top:26px; padding:18px 20px; background:var(--card-bg);
@@ -392,13 +396,13 @@
   }
 
   /* ===== Footer / Disclaimer ===== */
-  footer{background:var(--ink); color:var(--stone); padding:56px 0 34px;}
+  footer{background:var(--ink); color:#ccd1d6; padding:56px 0 34px;}
   footer .wrap{}
   .foot-top{
     display:grid; grid-template-columns:1.2fr 1fr; gap:50px;
     padding-bottom:36px; border-bottom:1px solid rgba(91,100,114,0.25);
   }
-  .foot-top h4{color:var(--paper); font-size:15px; font-family:'Fraunces', serif; font-weight:500; margin-bottom:12px;}
+  .foot-top h4{color:#f7f8f9; font-size:15px; font-family:'Fraunces', serif; font-weight:500; margin-bottom:12px;}
   .foot-top p{font-size:13px; line-height:1.75; color:#a29c8d; margin:0;}
   .foot-bottom{
     display:flex; justify-content:space-between; align-items:center;
@@ -457,7 +461,14 @@
     .wrap{ padding:0 16px; }
     .brand-text{ font-size:14.5px; }
     .brand img{ width:36px; height:36px; }
-    .gate-card{ padding:38px 22px; }
+    #gate{ padding:20px 16px; }
+    .gate-card{ padding:32px 20px; }
+    .gate-seal{ width:48px; height:48px; margin-bottom:16px; }
+    .gate-card h2{ font-size:20px; margin-bottom:14px; }
+    .gate-card p{ font-size:13.5px; margin-bottom:12px; }
+    .gate-card p:last-of-type{ margin-bottom:22px; }
+    .gate-btn{ padding:13px 22px; font-size:11.5px; width:100%; }
+    .gate-note{ margin-top:16px; }
     .utility-icons{ gap:16px; }
   }
 </style>
